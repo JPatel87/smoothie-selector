@@ -1,6 +1,5 @@
 import time
 from recipes import smoothies
-from itertools import chain
 
 def introduction():
     """
@@ -38,27 +37,31 @@ t = 10
 
 def smoothie_type_selection():
     """
-    User is asked to decide what type of smoothie recipes they are interested in; fruit, fruit and veg or both.
-    Used imported chain function from itertools module. 
+    User is asked to decide what type of smoothie recipe they are interested in; fruit or fruit and veg.
     """
-    print("Would you like to see Fruit(F), Fruit and Veg(FV) or both(B) types of smoothie recipes?") 
-    smoothie_select = input("Enter F or FV or B\n")
-    if smoothie_select == "F":
-        print("Ok so here are our Fruit smoothies...")
-        time.sleep(2)
-        for smoothie in smoothies["Fruit"]:
-            print(smoothie)
-    elif smoothie_select == "FV":
-        print("Ok, so here are Fruit and Veg smoothies:")
-        time.sleep(2)
-        for smoothie in smoothies["Fruit_and_Veg"]:
-            print(smoothie)
-    elif smoothie_select == "B":
-        time.sleep(2)
-        print("Ok, so here are all our smoothies:")
-        for smoothie in chain(smoothies["Fruit"], smoothies["Fruit_and_Veg"]):
-            print(smoothie)
-
+    print("Would you like to make a Fruit(F) or Fruit and Veg(FV) smoothie?") 
+    while True:
+        try:
+            smoothie_select = input("Enter F or FV \n")
+            if smoothie_select == "F":
+                print("Ok so here is our Fruit smoothie selection...")
+                time.sleep(2)
+                for smoothie in smoothies["Fruit"]:
+                    print(smoothie)
+                break
+            if smoothie_select == "FV":
+                print("Ok, so here is our Fruit and Veg smoothie selection...:")
+                time.sleep(2)
+                for smoothie in smoothies["Fruit_and_Veg"]:
+                    print(smoothie)
+                break
+            else:
+                raise ValueError(
+                f"You entered {smoothie_select}, only F or FV values are accepted, please try again"
+            )
+        except ValueError as e:
+            print(f"Invalid data: {e}. \n")
+        
 introduction()
 countdown(t)
 smoothie_type_selection()
