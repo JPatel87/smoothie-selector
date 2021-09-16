@@ -1,13 +1,15 @@
 import time
 from recipes import smoothies
 
+
 def introduction():
     """
-    Introductions, while loop implemented to check for user name. 
+    Introductions, while loop implemented to check for user name.
     Project purpose explained.
     """
     print("Welcome to Smoothie Selector!")
-    print("Lets start by introducing ourselves, my name is Coco Nutt, Coco for short.")
+    print("Lets start by introducing ourselves, my name is Coco Nutt, \
+    Coco for short.")
     while True:
         name = input("What would you like to be called? \n")
         if not name:
@@ -42,7 +44,7 @@ def smoothie_type_selection():
     print("Would you like to make a Fruit(F) or Fruit and Veg(FV) smoothie?") 
     while True:
         try:
-            smoothie_select = input("Enter F or FV \n")
+            smoothie_select = input("Enter F or FV \n").upper()
             if smoothie_select == "F":
                 print("Ok so here is our Fruit smoothie selection...")
                 time.sleep(2)
