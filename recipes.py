@@ -1,31 +1,32 @@
-smoothies = {
-    "Fruit": ["Peach and Rasberry", "Pomegranate and Strawberry", "Banana and Blueberry", "Strawberry and Watermelon", "Mango and Banana"],
-    "Fruit_and_Veg": ["Carrot and Orange", "Cucumber and Watermelon", "Avacado and Banana", "Spinach and Banana", "Strawberry and Cauliflower"]
+energizing_smoothies = {
+    "Pineapple, Celery and Spinach": {"Type": "FV", "Calories per serving (kcal)": 90, "Carbohydrates (g)": 19},
+    "Banana and Avacado": {"Type": "F", "Calories per serving (kcal)": 220, "Carbohydrates (g)": 31},
+    "Banana, Blueberry and Orange": {"Type": "F", "Calories per serving (kcal)": 190, "Carbohydrates (g)": 47},
+    "Cherry and Orange": {"Type": "F", "Calories per serving (kcal)": 296, "Carbohydrates (g)": 36},
+    "Rasberry and Apple": {"Type": "F", "Calories per serving (kcal)": 106, "Carbohydrates (g)": 14},
+    "Strawberry, Spinach and Orange": {"Type": "FV", "Calories per serving (kcal)": 90, "Carbohydrates (g)": 19}
+}
+
+immunity_booster_smoothies = {
+    "Mango and Banana": {"Type": "F", "Calories per serving (kcal)": 141, "Carbohydrates (g)": 2},
+    "Peach and Yoghurt": {"Type": "F", "Calories per serving (kcal)": 309, "Carbohydrates (g)": 7},
+    "Avocado, Banana and Kale": {"Type": "FV", "Calories per serving (kcal)": 252, "Carbohydrates (g)": 17},
+    "Bluberry, Avacado and Cocounut": {"Type": "F", "Calories per serving (kcal)": 238, "Carbohydrates (g)": 47},
+    "Pineapple and Turmeric": {"Type": "F", "Calories per serving (kcal)": 180, "Carbohydrates (g)": 41},
+    "Apple, Carrot and Beetroot": {"Type": "FV", "Calories per serving (kcal)": 134, "Carbohydrates (g)": 33}
 }
 
 smoothie_ingrediants = {
-    "Peach and Rasberry": ["410g peach halves", "100g rasberries", "100ml orange juice", "150ml custard"], 
-    "Pomegranate and Strawberry": ["1 banana", "100g strawberries", "120mL pomegranate juice", "120g greek yoghurt", "30g honey"],
-    "Banana and Blueberry": ["150g blueberries", "1 banana", "120g vanilla yogurt", "120ml milk"],
-    "Strawberry and Watermelon": ["150g watermelon flesh", "150g watermelon rind", "150g strawberries", "15g Honey", "5ml lemon juice"],
-    "Mango and Banana": ["1 mango", "1 banana", "500ml orange juice"],
-    "Carrot and Orange": ["2 carrots", "2 oranges", "2cm piece of ginger, grated", "2 tbsp oats", "100g ice"],
-    "Cucumber and Watermelon": ["300g watermelon", "1/2 cucumber", "2 sprigs of mint", "honey to taste"],
-    "Avacado and Banana": ["1/2 avacado", "1 banana", "15g honey", "240ml cup milk"],
-    "Spinach and Banana": ["1 handful spinach", "1 banana", "240ml milk", "10g Nutella"],
-    "Strawberry and Cauliflower": ["1 cup cauliflower florets", "1 cup strawberries", "1 banana", "480ml milk"]
-
-}
-    
-smoothie_details = {
-    "Peach and Rasberry": {"Type": "F", "Calories/serving(kcal)": 161},
-    "Pomegranate and Strawberry": {"Type": "F", "Calories/serving(kcal)": 451},
-    "Banana and Blueberry": {"Type": "F", "Calories/serving(kcal)": 336},
-    "Strawberry and Watermelon": {"Type": "F", "Calories/serving(kcal)": 100},
-    "Mango and Banana": {"Type": "F", "Calories/serving(kcal)": 107},
-    "Carrot and Orange": {"Type": "FV", "Calories/serving(kcal)": 75},
-    "Cucumber and Watermelon": {"Type": "FV", "Calories/serving(kcal)": 62},
-    "Avacado and Banana": {"Type": "FV", "Calories/serving(kcal)": 224},
-    "Spinach and Banana": {"Type": "FV", "Calories/serving(kcal)": 286},
-    "Strawberry and Cauliflower": {"Type": "FV", "Calories/serving(kcal)": 149}
+    "Pineapple, Celery and Spinach": ["1/2 cup low fat vanilla yoghurt", "3 slices pineapple", "1 stalk celery", "2 cups fresh spinach", "2 cups ice"],
+    "Banana and Avacado": ["1 cup almond milk", "2 medium bananas", "1/2 avacado", "2 dates", "1 cup ice"],
+    "Banana, Blueberry and Orange": ["4 medium oranges", "4 small bananas frozen", "1 1/2 cups frozen blueberries", "3 cups water"],
+    "Cherry and orange": ["2 cups frozen pitted cherries", "1/2 cup ground almonds", "2 tbsp flaxseed meal", "1/2 tsp pure almond extract"],
+    "Rasberry and apple": ["2 apples", "150g frozen rasberries", "150ml natural yoghurt", "2 tbsp porridge oats", "1/2 lemon", "100ml milk"],
+    "Strawberry, Spinach and Orange": ["160g ripe straberries", "160g baby spinach", "1 avacado", "150ml bio yoghurt", "2 small oranges", "1/2 tsp orange zest"],
+    "Mango and banana": ["2 bananas", "3 cups mango chunks", "1 1/4 cup almond milk"],
+    "Peach and yoghurt": ["3 cups sliced peaches", "1 cup greek yoghurt", "1 cup almond milk", "2 tbsp honey"],
+    "Avacado, banana and kale": ["1 avacado", "1 banana", "1 cup baby kale", "1 1/2 cup almond milk", "2 tbsp vanilla protein powder"],
+    "Bluberry, avacado and cocounut": ["2 cups frozen blueberries", "1 frozen banana", "1/2 cup greek yoghurt", "1 tbsp flaxseeds", "2 cups coconut water"],
+    "Pineapple and turmeric": ["2 cups frozen pineapple chunks", "1 banana", "1 cup dairy free milk", "1 tbsp fresh turmeric", "1 tsp ginger"],
+    "Apple, Carrot and Beetroot": ["1 red beetroot", "3 carrots", "1 orange", "1 2inch piece ginger", "1 cup cold water"]
 }

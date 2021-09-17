@@ -1,5 +1,6 @@
 import time
-from recipes import smoothies
+from recipes import energizing_smoothies
+from recipes import immunity_booster_smoothies
 
 
 def introduction():
@@ -41,29 +42,29 @@ def smoothie_type_selection():
     """
     User is asked to decide what type of smoothie recipe they are interested in; fruit or fruit and veg.
     """
-    print("Would you like to make a Fruit(F) or Fruit and Veg(FV) smoothie?") 
+    print("Would you like to make an Energizing smoothie (E) or an Immunity boosting (I) smoothie?") 
     while True:
         try:
-            smoothie_select = input("Enter F or FV \n").upper()
-            if smoothie_select == "F":
-                print("Ok so here is our Fruit smoothie selection...")
+            smoothie_select = input("Enter E or I \n").upper()
+            if smoothie_select == "E":
+                print("Nice choice, these types of smoothies are great for breakfast:")
                 time.sleep(2)
-                for smoothie in smoothies["Fruit"]:
+                for smoothie in energizing_smoothies:
                     print(smoothie)
                 break
-            if smoothie_select == "FV":
-                print("Ok, so here is our Fruit and Veg smoothie selection...:")
+            if smoothie_select == "I":
+                print("Great choice, these types of smoothies are antioxidant rich too:")
                 time.sleep(2)
-                for smoothie in smoothies["Fruit_and_Veg"]:
+                for smoothie in immunity_booster_smoothies:
                     print(smoothie)
                 break
             else:
                 raise ValueError(
-                f"You entered {smoothie_select}, only F or FV values are accepted, please try again"
+                f"You entered {smoothie_select}, only E or I values are accepted, please try again"
             )
         except ValueError as e:
             print(f"Invalid data: {e}. \n")
-        
+
 introduction()
 countdown(t)
 smoothie_type_selection()
