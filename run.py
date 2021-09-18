@@ -65,6 +65,16 @@ def smoothie_type_selection():
         except ValueError as e:
             print(f"Invalid data: {e}. \n")
 
+def help_required(str):
+    print(str)
+
+def calories():
+    help_required("\nSpoilt for choice, no worries, I'm here to help!\n")
+    print("Would you like to make a smoothie with low calories (<200 kcal)?")
+    calories_select = input("Enter Y or N \n").upper()
+    
+
 introduction()
 countdown(t)
 smoothie_type_selection()
+calories()
