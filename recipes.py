@@ -10,7 +10,7 @@ energizing_smoothies = {
 immunity_booster_smoothies = {
     "Mango and Banana": {"Type": "F", "Calories per serving (kcal)": 141, "Carbohydrates (g)": 2},
     "Peach and Yoghurt": {"Type": "F", "Calories per serving (kcal)": 309, "Carbohydrates (g)": 7},
-    "Avocado, Banana and Kale": {"Type": "FV", "Calories per serving (kcal)": 252, "Carbohydrates (g)": 17},
+    "Avacado, Banana and Kale": {"Type": "FV", "Calories per serving (kcal)": 252, "Carbohydrates (g)": 17},
     "Bluberry, Avacado and Cocounut": {"Type": "F", "Calories per serving (kcal)": 238, "Carbohydrates (g)": 47},
     "Pineapple and Turmeric": {"Type": "F", "Calories per serving (kcal)": 180, "Carbohydrates (g)": 41},
     "Apple, Carrot and Beetroot": {"Type": "FV", "Calories per serving (kcal)": 134, "Carbohydrates (g)": 33}

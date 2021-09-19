@@ -45,9 +45,8 @@ def smoothie_type_selection():
     """
     print("Would you like to make an Energizing smoothie (E) or an Immunity boosting (I) smoothie?") 
     while True:
-
+        smoothie_select = input("Enter E or I \n").upper()
         try:
-            smoothie_select = input("Enter E or I \n").upper()
             if smoothie_select == "E":
                 print("Nice choice, these types of smoothies are great for breakfast:")
                 time.sleep(2)
@@ -71,20 +70,40 @@ def smoothie_type_selection():
             print(f"Invalid data: {e}. \n")
 
 def help_required(str):
+    """ 
+    Help function to be called which allows a help statement to be run before asking the user a question
+    """
     print(str)
 
 def calories(smoothie_type):
+    """
+    User is asked if they would like a low calorie recipe according to which smoothie type they have chosen
+    """
     help_required("\nSpoilt for choice, no worries, I'm here to help!\n")
     time.sleep(2)
     print("Would you like to make a smoothie with low calories (<200 kcal)?")
-    low_calories = input("Enter Y (yes) or N (not fussed) \n").upper()
-    time.sleep(1)
-    print("Ok, so here are your choices...")
     time.sleep(2)
-    if low_calories == "Y":
-        for i in smoothie_type:
-            if smoothie_type[i]["Calories per serving (kcal)"] <= 200:
-                print(i)
+    while True:
+        low_calories = input("Enter Y (yes) or N (no) \n").upper()
+        try: 
+            if low_calories == "Y":
+                print("Ok, so here are your choices...")
+                for i in smoothie_type:
+                    if smoothie_type[i]["Calories per serving (kcal)"] <= 200:
+                        print(i)
+                break
+            if low_calories == "N":
+                print("Ok, so here are your choices...")
+                for i in smoothie_type:
+                    if smoothie_type[i]["Calories per serving (kcal)"] > 200:
+                        print(i)
+                break
+            else:
+                raise ValueError(
+                f"You entered {low_calories}, only Y or N values are accepted, please try again")
+        except ValueError as e:
+                        print(f"Invalid data: {e}. \n")
+
 
 introduction()
 countdown(t)
