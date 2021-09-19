@@ -28,7 +28,8 @@ def introduction():
 
 def countdown(t):
     """
-    Countdown timer added to start smoothie selection process, using imported time module. 
+    Countdown timer added to start smoothie selection process, using imported 
+    time module.
     """
     while t > 0:
         mins, secs = divmod(t, 60)
@@ -36,7 +37,7 @@ def countdown(t):
         print("**starting in" + " " + timer + " " "seconds**", end="\r")
         time.sleep(1)
         t -= 1
-t = 10   
+t = 2
 
 def smoothie_type_selection():
     """
@@ -44,6 +45,7 @@ def smoothie_type_selection():
     """
     print("Would you like to make an Energizing smoothie (E) or an Immunity boosting (I) smoothie?") 
     while True:
+
         try:
             smoothie_select = input("Enter E or I \n").upper()
             if smoothie_select == "E":
@@ -51,12 +53,15 @@ def smoothie_type_selection():
                 time.sleep(2)
                 for smoothie in energizing_smoothies:
                     print(smoothie)
+                time.sleep(2)
+                calories(energizing_smoothies)
                 break
             if smoothie_select == "I":
                 print("Great choice, these types of smoothies are antioxidant rich too:")
                 time.sleep(2)
                 for smoothie in immunity_booster_smoothies:
                     print(smoothie)
+                calories(immunity_booster_smoothies)
                 break
             else:
                 raise ValueError(
@@ -68,13 +73,20 @@ def smoothie_type_selection():
 def help_required(str):
     print(str)
 
-def calories():
+def calories(smoothie_type):
     help_required("\nSpoilt for choice, no worries, I'm here to help!\n")
+    time.sleep(2)
     print("Would you like to make a smoothie with low calories (<200 kcal)?")
-    calories_select = input("Enter Y or N \n").upper()
-    
+    low_calories = input("Enter Y (yes) or N (not fussed) \n").upper()
+    time.sleep(1)
+    print("Ok, so here are your choices...")
+    time.sleep(2)
+    if low_calories == "Y":
+        for i in smoothie_type:
+            if smoothie_type[i]["Calories per serving (kcal)"] <= 200:
+                print(i)
 
 introduction()
 countdown(t)
 smoothie_type_selection()
-calories()
+
