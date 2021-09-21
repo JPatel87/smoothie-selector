@@ -1,19 +1,19 @@
 energizing_smoothies = {
-    "Pineapple, Celery and Spinach": {"Type": "FV", "Calories per serving (kcal)": 90, "Carbohydrates (g)": 19},
-    "Banana and Avacado": {"Type": "F", "Calories per serving (kcal)": 220, "Carbohydrates (g)": 31},
-    "Banana, Blueberry and Orange": {"Type": "F", "Calories per serving (kcal)": 190, "Carbohydrates (g)": 47},
-    "Cherry and Orange": {"Type": "F", "Calories per serving (kcal)": 296, "Carbohydrates (g)": 36},
-    "Rasberry and Apple": {"Type": "F", "Calories per serving (kcal)": 106, "Carbohydrates (g)": 14},
-    "Strawberry, Spinach and Orange": {"Type": "FV", "Calories per serving (kcal)": 90, "Carbohydrates (g)": 19}
+    "Banana and Avacado": {"Type": "F", "Cal(kcal)": 220, "Carbs(g)": 31},
+    "Banana, Blueberry and Orange": {"Type": "E", "Ingreds": "F", "Cal(kcal)": 190, "Carbs(g)": 47},
+    "Cherry and Orange": {"Type": "F", "Cal(kcal)": 296, "Carbs(g)": 36},
+    "Rasberry and Apple": {"Type": "F", "Cal(kcal)": 106, "Carbs(g)": 14},
+    "Pineapple, Celery and Spinach": {"Type": "FV", "Cal(kcal)": 90, "Carbs(g)": 19},
+    "Strawberry, Spinach and Orange": {"Type": "FV", "Cal(kcal)": 90, "Carbs(g)": 19}
 }
 
-immunity_booster_smoothies = {
-    "Mango and Banana": {"Type": "F", "Calories per serving (kcal)": 141, "Carbohydrates (g)": 2},
-    "Peach and Yoghurt": {"Type": "F", "Calories per serving (kcal)": 309, "Carbohydrates (g)": 7},
-    "Avacado, Banana and Kale": {"Type": "FV", "Calories per serving (kcal)": 252, "Carbohydrates (g)": 17},
-    "Bluberry, Avacado and Cocounut": {"Type": "F", "Calories per serving (kcal)": 238, "Carbohydrates (g)": 47},
-    "Pineapple and Turmeric": {"Type": "F", "Calories per serving (kcal)": 180, "Carbohydrates (g)": 41},
-    "Apple, Carrot and Beetroot": {"Type": "FV", "Calories per serving (kcal)": 134, "Carbohydrates (g)": 33}
+immunity_smoothies = {
+    "Mango and Banana": {"Type": "F", "Cal(kcal)": 141, "Carbs(g)": 2},
+    "Peach and Yoghurt": {"Type": "F", "Cal(kcal)": 309, "Carbs(g)": 7},
+    "Bluberry, Avacado and Cocounut": {"Type": "F", "Cal(kcal)": 238, "Carbs(g)": 47},
+    "Pineapple and Turmeric": {"Type": "F", "Cal(kcal)": 180, "Carbs(g)": 41},
+    "Avacado, Banana and Kale": {"Type": "FV", "Cal(kcal)": 252, "Carbs(g)": 17},
+    "Apple, Carrot and Beetroot": {"Type": "FV", "Cal(kcal)": 134, "Carbs(g)": 33}
 }
 
 smoothie_ingrediants = {

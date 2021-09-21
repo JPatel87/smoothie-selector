@@ -1,6 +1,7 @@
 import time
 from recipes import energizing_smoothies
-from recipes import immunity_booster_smoothies
+from recipes import immunity_smoothies
+from recipes import smoothie_ingrediants
 
 
 def introduction():
@@ -52,15 +53,14 @@ def smoothie_type_selection():
                 time.sleep(2)
                 for smoothie in energizing_smoothies:
                     print(smoothie)
-                time.sleep(2)
                 calories(energizing_smoothies)
                 break
             if smoothie_select == "I":
                 print("Great choice, these types of smoothies are antioxidant rich too:")
                 time.sleep(2)
-                for smoothie in immunity_booster_smoothies:
+                for smoothie in immunity_smoothies:
                     print(smoothie)
-                calories(immunity_booster_smoothies)
+                calories(immunity_smoothies)
                 break
             else:
                 raise ValueError(
@@ -89,13 +89,13 @@ def calories(smoothie_type):
             if low_calories == "Y":
                 print("Ok, so here are your choices...")
                 for i in smoothie_type:
-                    if smoothie_type[i]["Calories per serving (kcal)"] <= 200:
+                    if smoothie_type[i]["Cal(kcal)"] <= 200:
                         print(i)
                 break
             if low_calories == "N":
                 print("Ok, so here are your choices...")
                 for i in smoothie_type:
-                    if smoothie_type[i]["Calories per serving (kcal)"] > 200:
+                    if smoothie_type[i]["Cal(kcal)"] > 200:
                         print(i)
                 break
             else:
@@ -103,9 +103,7 @@ def calories(smoothie_type):
                 f"You entered {low_calories}, only Y or N values are accepted, please try again")
         except ValueError as e:
                         print(f"Invalid data: {e}. \n")
-
-
+        
 introduction()
 countdown(t)
 smoothie_type_selection()
-
