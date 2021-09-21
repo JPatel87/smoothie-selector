@@ -88,14 +88,14 @@ def calories(smoothie_type):
             if low_cal == "Y":
                 print("Ok, so here are your choices...")
                 for i in smoothie_type:
-                    if smoothie_type[i]["Cal(kcal)"] <= 200:
+                    if smoothie_type[i]["Cal(kcal)"] < 200:
                         print(i)
                 carbs(low_cal, smoothie_type)
                 break
             if low_cal == "N":
                 print("Ok, so here are your choices...")
                 for i in smoothie_type:
-                    if smoothie_type[i]["Cal(kcal)"] > 200:
+                    if smoothie_type[i]["Cal(kcal)"] >= 200:
                         print(i)
                 carbs(low_cal, smoothie_type)
                 break
@@ -108,7 +108,7 @@ def calories(smoothie_type):
 def carbs(low_cal, smoothie_type):
     print("ok please select carb level")
     time.sleep(2)
-    print("Would you like to make a smoothie with low carbs (<20g)?")
+    print("Would you like to make a smoothie with low carbs (<25g)?")
     time.sleep(2)
     while True:
         low_carbs = input("Enter Y (yes) or N (no) \n").upper()
@@ -116,25 +116,25 @@ def carbs(low_cal, smoothie_type):
             if low_cal == "Y" and low_carbs == "Y":
                 print("Ok, so here are your choices...")
                 for i in smoothie_type:
-                    if smoothie_type[i]["Cal(kcal)"] <= 200 and smoothie_type[i]["Carbs(g)"] <= 20:
+                    if smoothie_type[i]["Cal(kcal)"] <= 200 and smoothie_type[i]["Carbs(g)"] < 25:
                         print(i)
                 break
             if low_cal == "N" and low_carbs == "N":
                 print("Ok, so here are your choices...")
                 for i in smoothie_type:
-                    if smoothie_type[i]["Cal(kcal)"] > 200 and smoothie_type[i]["Carbs(g)"] > 20:
+                    if smoothie_type[i]["Cal(kcal)"] > 200 and smoothie_type[i]["Carbs(g)"] >= 25:
                         print(i)
                 break
             if low_cal == "N" and low_carbs == "Y":
                 print("Ok, so here are your choices...")
                 for i in smoothie_type:
-                    if smoothie_type[i]["Cal(kcal)"] > 200 and smoothie_type[i]["Carbs(g)"] <= 20:
+                    if smoothie_type[i]["Cal(kcal)"] > 200 and smoothie_type[i]["Carbs(g)"] < 25:
                         print(i)
                 break
             if low_cal == "Y" and low_carbs == "N":
                 print("Ok, so here are your choices...")
                 for i in smoothie_type:
-                    if smoothie_type[i]["Cal(kcal)"] <= 200 and smoothie_type[i]["Carbs(g)"] > 20:
+                    if smoothie_type[i]["Cal(kcal)"] <= 200 and smoothie_type[i]["Carbs(g)"] >= 25:
                         print(i)
                 break
             else:
