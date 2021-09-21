@@ -1,10 +1,10 @@
 energizing_smoothies = {
     "Banana and Avacado": {"Type": "F", "Cal(kcal)": 220, "Carbs(g)": 31},
-    "Banana, Blueberry and Orange": {"Type": "E", "Ingreds": "F", "Cal(kcal)": 190, "Carbs(g)": 47},
+    "Banana, Blueberry and Orange": {"Type": "F", "Cal(kcal)": 190, "Carbs(g)": 47},
     "Cherry and Orange": {"Type": "F", "Cal(kcal)": 296, "Carbs(g)": 36},
     "Rasberry and Apple": {"Type": "F", "Cal(kcal)": 106, "Carbs(g)": 14},
     "Pineapple, Celery and Spinach": {"Type": "FV", "Cal(kcal)": 90, "Carbs(g)": 19},
-    "Strawberry, Spinach and Orange": {"Type": "FV", "Cal(kcal)": 90, "Carbs(g)": 19}
+    "Strawberry, Spinach and Orange": {"Type": "FV", "Cal(kcal)": 226, "Carbs(g)": 16}
 }
 
 immunity_smoothies = {
