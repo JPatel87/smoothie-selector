@@ -6,7 +6,6 @@ from recipes import (
     smoothie_ingrediants
 )
 
-
 def introduction():
     """
     Introductions, while loop implemented to check for user name.
@@ -71,7 +70,7 @@ def smoothie_type_selection():
                 break
             if smoothie_type == "I":
                 print("\nGreat choice, these types of smoothies"
-                      " will keep you going during the flu season\n")
+                      " will keep you going during the flu season.\n")
                 time.sleep(2)
                 print("Logging your choice...\n")
                 time.sleep(2)
@@ -165,6 +164,8 @@ def carbs(low_cal, smoothie_type):
 
 
 def decision(smoothie_options):
+    print(colored("Voila, here are your options:",
+                      color="yellow", on_color="on_magenta"))
     for smoothie in smoothie_options:
         print(smoothie)
 
