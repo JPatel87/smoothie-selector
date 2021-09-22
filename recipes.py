@@ -22,11 +22,11 @@ immunity_smoothies = {
 }
 
 smoothie_ingrediants = {
-    "Pineapple, Celery and Spinach": ["1/2 cup low fat vanilla yoghurt", "3 slices pineapple", "1 stalk celery", "2 cups fresh spinach", "2 cups ice"],
+    "pineapple, celery and spinach": ["1/2 cup low fat vanilla yoghurt", "3 slices pineapple", "1 stalk celery", "2 cups fresh spinach", "2 cups ice"],
     "Banana and Avacado": ["1 cup almond milk", "2 medium bananas", "1/2 avacado", "2 dates", "1 cup ice"],
     "Banana, Blueberry and Orange": ["4 medium oranges", "4 small bananas frozen", "1 1/2 cups frozen blueberries", "3 cups water"],
     "Cherry and orange": ["2 cups frozen pitted cherries", "1/2 cup ground almonds", "2 tbsp flaxseed meal", "1/2 tsp pure almond extract"],
-    "Rasberry and apple": ["2 apples", "150g frozen rasberries", "150ml natural yoghurt", "2 tbsp porridge oats", "1/2 lemon", "100ml milk"],
+    "rasberry and apple": ["2 apples", "150g frozen rasberries", "150ml natural yoghurt", "2 tbsp porridge oats", "1/2 lemon", "100ml milk"],
     "Strawberry, Spinach and Orange": ["160g ripe strawberries", "160g baby spinach", "1 avacado", "150ml bio yoghurt", "2 small oranges", "1/2 tsp orange zest"],
     "Rasberry and Avacado": ["1 avacado", "3/4 cup rasberries", "1 tbsp lemon juice", "1 1/2 cup unsweetened coconut milk", "1 cup vanilla protein powder"],
     "Passion fruit and Banana": ["3 passion fruits", "1 banana", "1 small mango", "300ml orange juice"],

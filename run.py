@@ -1,4 +1,6 @@
 import time
+import emoji
+from termcolor import colored
 from recipes import energizing_smoothies
 from recipes import immunity_smoothies
 from recipes import smoothie_ingrediants
@@ -12,7 +14,7 @@ def introduction():
     print("Lets start by introducing ourselves, my name is Coco Nutt, \
     Coco for short.")
     while True:
-        name = input("What would you like to be called? \n")
+        name = input("What would you like to be called?\n")
         if not name:
             print("Sorry I didn't catch that...")
             continue
@@ -45,7 +47,7 @@ def smoothie_type_selection():
     """
     print("Would you like to make an Energizing smoothie (E) or an Immunity boosting (I) smoothie?") 
     while True:
-        smoothie_select = input("Enter E or I \n").upper()
+        smoothie_select = input("Enter E or I\n").upper()
         try:
             if smoothie_select == "E":
                 print("Nice choice, these types of smoothies are great for breakfast:")
@@ -83,7 +85,7 @@ def calories(smoothie_type):
     print("Would you like to make a smoothie with low calories (<200 kcal)?")
     time.sleep(2)
     while True:
-        low_cal = input("Enter Y (yes) or N (no) \n").upper()
+        low_cal = input("Enter Y (yes) or N (no)\n").upper()
         try: 
             if low_cal == "Y":
                 print("Ok, so here are your choices...")
@@ -103,7 +105,7 @@ def calories(smoothie_type):
                 raise ValueError(
                 f"You entered {low_cal}, only Y or N values are accepted, please try again")
         except ValueError as e:
-                        print(f"Invalid data: {e}. \n")
+                        print(f"Invalid data: {e}.\n")
 
 def carbs(low_cal, smoothie_type):
     print("ok please select carb level")
@@ -111,13 +113,14 @@ def carbs(low_cal, smoothie_type):
     print("Would you like to make a smoothie with low carbs (<25g)?")
     time.sleep(2)
     while True:
-        low_carbs = input("Enter Y (yes) or N (no) \n").upper()
+        low_carbs = input("Enter Y (yes) or N (no)\n").upper()
         try: 
             if low_cal == "Y" and low_carbs == "Y":
                 print("Ok, so here are your choices...")
                 for i in smoothie_type:
                     if smoothie_type[i]["Cal(kcal)"] <= 200 and smoothie_type[i]["Carbs(g)"] < 25:
                         print(i)
+                decision(smoothie_ingrediants)
                 break
             if low_cal == "N" and low_carbs == "N":
                 print("Ok, so here are your choices...")
@@ -141,8 +144,8 @@ def carbs(low_cal, smoothie_type):
                 raise ValueError(
                 f"You entered {low_carbs}, only Y or N values are accepted, please try again")
         except ValueError as e:
-                        print(f"Invalid data: {e}. \n")
-        
+                        print(f"Invalid data: {e}.\n")
+
 introduction()
 countdown(t)
 smoothie_type_selection()
