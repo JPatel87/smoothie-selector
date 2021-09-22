@@ -10,11 +10,11 @@ def introduction():
     Introductions, while loop implemented to check for user name.
     Project purpose explained.
     """
-    print("Welcome to Smoothie Selector!")
-    print("Lets start by introducing ourselves, my name is Coco Nutt, \
+    print("Welcome, lets start by introducing ourselves, my name is Coco Nutt,\
     Coco for short.")
+    print(colored("What would you like to be called?", color="yellow", on_color="on_red"))
     while True:
-        name = input("What would you like to be called?\n")
+        name = input(colored("Enter name\n", color="yellow"))
         if not name:
             print("Sorry I didn't catch that...")
             continue
@@ -28,26 +28,27 @@ def introduction():
             time.sleep(2)
             break
 
-def countdown(t):
+def countdown():
     """
     Countdown timer added to start smoothie selection process, using imported 
     time module.
     """
+    t = 2
+    
     while t > 0:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
         print("**starting in" + " " + timer + " " "seconds**", end="\r")
         time.sleep(1)
         t -= 1
-t = 2
 
 def smoothie_type_selection():
     """
     User is asked to decide what type of smoothie recipe they are interested in; fruit or fruit and veg.
     """
-    print("Would you like to make an Energizing smoothie (E) or an Immunity boosting (I) smoothie?") 
+    print(colored("Would you like to make an Energizing smoothie (E) or an Immunity boosting (I) smoothie?", color="yellow", on_color="on_red")) 
     while True:
-        smoothie_select = input("Enter E or I\n").upper()
+        smoothie_select = input(colored("Enter E or I\n", color="yellow")).upper()
         try:
             if smoothie_select == "E":
                 print("Nice choice, these types of smoothies are great for breakfast:")
@@ -70,22 +71,15 @@ def smoothie_type_selection():
         except ValueError as e:
             print(f"Invalid data: {e}. \n")
 
-def help_required(str):
-    """ 
-    Help function to be called which allows a help statement to be run before asking the user a question
-    """
-    print(str)
-
 def calories(smoothie_type):
     """
     User is asked if they would like a low calorie recipe according to which smoothie type they have chosen
     """
-    help_required("\nSpoilt for choice, no worries, I'm here to help!\n")
     time.sleep(2)
-    print("Would you like to make a smoothie with low calories (<200 kcal)?")
+    print(colored("Would you like to make a smoothie with low calories (<200 kcal)?", color="yellow", on_color="on_red"))
     time.sleep(2)
     while True:
-        low_cal = input("Enter Y (yes) or N (no)\n").upper()
+        low_cal = input(colored("Enter Y or N\n", color="yellow")).upper()
         try: 
             if low_cal == "Y":
                 print("Ok, so here are your choices...")
@@ -110,17 +104,16 @@ def calories(smoothie_type):
 def carbs(low_cal, smoothie_type):
     print("ok please select carb level")
     time.sleep(2)
-    print("Would you like to make a smoothie with low carbs (<25g)?")
+    print(colored("Would you like to make a smoothie with low carbs (<25g)?", color="yellow", on_color="on_red"))
     time.sleep(2)
     while True:
-        low_carbs = input("Enter Y (yes) or N (no)\n").upper()
+        low_carbs = input(colored("Enter Y or N\n", color="yellow")).upper()
         try: 
             if low_cal == "Y" and low_carbs == "Y":
                 print("Ok, so here are your choices...")
                 for i in smoothie_type:
                     if smoothie_type[i]["Cal(kcal)"] <= 200 and smoothie_type[i]["Carbs(g)"] < 25:
                         print(i)
-                decision(smoothie_ingrediants)
                 break
             if low_cal == "N" and low_carbs == "N":
                 print("Ok, so here are your choices...")
@@ -146,6 +139,7 @@ def carbs(low_cal, smoothie_type):
         except ValueError as e:
                         print(f"Invalid data: {e}.\n")
 
+print("\U0001F34A" " \U0001F34F" " Smoothie Selector" "\U0001F34F" " \U0001F34A\n")
 introduction()
-countdown(t)
+countdown()
 smoothie_type_selection()
