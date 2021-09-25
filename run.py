@@ -28,7 +28,8 @@ def introduction():
             print("I am here to help you decide on what smooothie to make"
                   " today.\n")
             time.sleep(2)
-            print("Get yourself a pen and paper, we will be starting soon...\n")
+            print("Get yourself a pen and paper, we will be starting"
+                  " soon...\n")
             time.sleep(2)
             break
 
@@ -59,7 +60,7 @@ def smoothie_choice():
            color="yellow", on_color="on_red"))
     while True:
         type = input(colored("Enter E or I\n",
-                               color="green")).upper()
+                             color="green")).upper()
         try:
             if type == "E":
                 print("\nNice choice, these types of smoothies are great for"
@@ -80,8 +81,8 @@ def smoothie_choice():
                         smoothie.pop(key1)
                 break
             else:
-                raise ValueError(f"You entered {smooth},"
-                                 " only E or I values are accepted, please"
+                raise ValueError(f"You entered {type},"
+                                 " only E or I answers are accepted, please"
                                  " try again")
         except ValueError as e:
             print(f"Invalid data: {e}. \n")
@@ -117,7 +118,7 @@ def cal(smoothie):
                 break
             else:
                 raise ValueError(f"You entered {low_cal},"
-                                 " only Y or N values are accepted, please"
+                                 " only Y or N answers are accepted, please"
                                  " try again")
         except ValueError as e:
             print(f"Invalid data: {e}. \n")
@@ -153,7 +154,7 @@ def carbs(smoothie):
                 break
             else:
                 raise ValueError(f"You entered {low_carbs},"
-                                 " only Y or N values are accepted, please"
+                                 " only Y or N answers are accepted, please"
                                  " try again")
         except ValueError as e:
             print(f"Invalid data: {e}. \n")
@@ -163,8 +164,8 @@ def carbs(smoothie):
 
 def fruit_or_veg(smoothie):
     """
-    User is asked if they would like a fruit or fruit and veg recipe according \
-    to which carb level they have chosen.
+    User is asked if they would like a fruit or fruit and veg recipe \
+    according to which carb level they have chosen.
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with fruit only (F) or"
@@ -191,7 +192,7 @@ def fruit_or_veg(smoothie):
                 break
             else:
                 raise ValueError(f"You entered {composition},"
-                                 " only Y or N values are accepted, please"
+                                 " only F or FV answers are accepted, please"
                                  " try again")
         except ValueError as e:
             print(f"Invalid data: {e}. \n")
@@ -217,3 +218,4 @@ print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
 
 main()
+
