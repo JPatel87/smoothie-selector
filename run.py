@@ -82,10 +82,10 @@ def smoothie_choice():
                 break
             else:
                 raise ValueError(f"You entered {type},"
-                                 " only E or I answers are accepted, please"
+                                 " only E or I entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(f"Invalid data: {e}. \n")
+            print(f"Invalid entry: {e}. \n")
 
     return smoothie
 
@@ -118,10 +118,10 @@ def cal(smoothie):
                 break
             else:
                 raise ValueError(f"You entered {low_cal},"
-                                 " only Y or N answers are accepted, please"
+                                 " only Y or N entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(f"Invalid data: {e}. \n")
+            print(f"Invalid entry: {e}. \n")
 
     return smoothie
 
@@ -154,10 +154,10 @@ def carbs(smoothie):
                 break
             else:
                 raise ValueError(f"You entered {low_carbs},"
-                                 " only Y or N answers are accepted, please"
+                                 " only Y or N entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(f"Invalid data: {e}. \n")
+            print(f"Invalid entry: {e}. \n")
 
     return smoothie
 
@@ -192,16 +192,24 @@ def fruit_or_veg(smoothie):
                 break
             else:
                 raise ValueError(f"You entered {composition},"
-                                 " only F or FV answers are accepted, please"
+                                 " only F or FV entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(f"Invalid data: {e}. \n")
+            print(f"Invalid entry: {e}. \n")
 
     return smoothie
 
 
 def result(smoothie):
-    print(smoothie)
+    print("Great, I have a recipe that ticks all your boxes...\n")
+    time.sleep(2)
+    for key1, val1 in smoothie.items():
+        print(colored(f'{key1} smoothie',
+                      color="yellow", on_color="on_magenta"))
+        print(f'{"Cal(kcal)"}/serving : {val1["Cal(kcal)"]}')
+        print(f'{"Carbs(g)"}/serving : {val1["Carbs(g)"]}')
+    time.sleep(2)
+    print("\nHappy with this selection?")
 
 
 def main():
