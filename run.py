@@ -1,10 +1,10 @@
 import time
 from termcolor import colored
 from recipes import (
-    energizing_smoothies,
-    immunity_smoothies,
+    smoothies,
     smoothie_ingrediants
 )
+
 
 def introduction():
     """
@@ -47,133 +47,62 @@ def countdown():
         t -= 1
 
 
-def smoothie_type_selection():
+def smoothie_choice():
     """
     User is asked to decide what type of smoothie recipe they are interested \
-    in; fruit or fruit and veg.
+    in; energizing or immunity, if they do not answer correctly an error \
+    message will appear and they will be asked to re-enter their choice.
     """
+    smoothie = smoothies
     print(colored
           ("Would you like to make an Energizing(E) or Immunity(I) smoothie?",
-           color="yellow", on_color="on_red")
-          )
+           color="yellow", on_color="on_red"))
     while True:
-        smoothie_type = input(colored("Enter E or I\n",
-                                      color="green")).upper()
+        smooth = input(colored("Enter E or I\n",
+                               color="green")).upper()
         try:
-            if smoothie_type == "E":
+            if smooth == "E":
                 print("\nNice choice, these types of smoothies are great for"
                       " breakfast or after a long workout.\n")
                 time.sleep(2)
                 print("Logging your choice...\n")
                 time.sleep(2)
-                calories(energizing_smoothies)
+                for key1, val1 in list(smoothie.items()):
+                    if (val1["Type"] != "E"):
+                        smoothie.pop(key1)
                 break
-            if smoothie_type == "I":
+            elif smooth == "I":
                 print("\nGreat choice, these types of smoothies"
                       " will keep you going during the flu season.\n")
                 time.sleep(2)
                 print("Logging your choice...\n")
                 time.sleep(2)
-                calories(immunity_smoothies)
+                for key1, val1 in list(smoothie.items()):
+                    if (val1["Type"] != "I"):
+                        smoothie.pop(key1)
                 break
             else:
-                raise ValueError(f"You entered {smoothie_type},"
+                raise ValueError(f"You entered {smooth},"
                                  " only E or I values are accepted, please"
                                  " try again")
         except ValueError as e:
             print(f"Invalid data: {e}. \n")
 
-
-def calories(smoothie_type):
-    """
-    User is asked if they would like a low calorie recipe according to which \
-    smoothie type they have chosen.
-    """
-    time.sleep(2)
-    print(colored("Would you like to make a smoothie with low"
-                  " calories (<200 kcal)?", color="yellow", on_color="on_red"))
-    time.sleep(2)
-    while True:
-        low_cal = input(colored("Enter Y or N\n", color="green")).upper()
-        try:
-            if low_cal == "Y":
-                print("\nLogging your choice...\n")
-                carbs(low_cal, smoothie_type)
-                break
-            if low_cal == "N":
-                print("\nLogging your choice...\n")
-                carbs(low_cal, smoothie_type)
-                break
-            else:
-                raise ValueError(f"You entered {low_cal}, only Y or N values"
-                                 " are accepted, please try again")
-        except ValueError as e:
-            print(f"Invalid data: {e}.\n")
+    return smoothie
 
 
-def carbs(low_cal, smoothie_type):
-    """
-    User is asked if they would like a low carbs recipe according to which \
-    smoothie type and calorie option they have chosen.
-    """
-    time.sleep(2)
-    print(colored("Would you like to make a smoothie with low carbs (<25g)?",
-                  color="yellow", on_color="on_red"))
-    time.sleep(2)
-    while True:
-        low_carbs = input(colored("Enter Y or N\n", color="green")).upper()
-        smoothie_options = []
-        try:
-            if low_cal == "Y" and low_carbs == "Y":
-                print("\nLogging your choice...\n")
-                time.sleep(2)
-                for i in smoothie_type:
-                    if smoothie_type[i]["Cal(kcal)"] <= 200 and smoothie_type[i]["Carbs(g)"] < 25:
-                        smoothie_options.append(i)
-                decision(smoothie_options)
-                break
-            if low_cal == "N" and low_carbs == "N":
-                print("\nLogging your choice...\n")
-                time.sleep(2)
-                for i in smoothie_type:
-                    if smoothie_type[i]["Cal(kcal)"] > 200 and smoothie_type[i]["Carbs(g)"] >= 25:
-                        smoothie_options.append(i)
-                decision(smoothie_options)     
-                break
-            if low_cal == "N" and low_carbs == "Y":
-                print("\nLogging your choice...\n")
-                time.sleep(2)
-                for i in smoothie_type:
-                    if smoothie_type[i]["Cal(kcal)"] > 200 and smoothie_type[i]["Carbs(g)"] < 25:
-                        smoothie_options.append(i)    
-                decision(smoothie_options)   
-                break
-            if low_cal == "Y" and low_carbs == "N":
-                print("\nLogging your choice...\n")
-                time.sleep(2)
-                for i in smoothie_type:
-                    if smoothie_type[i]["Cal(kcal)"] <= 200 and smoothie_type[i]["Carbs(g)"] >= 25:
-                        smoothie_options.append(i)
-                decision(smoothie_options)
-                break
-            else:
-                raise ValueError(f"You entered {low_carbs}, only Y or N values"
-                                 "are accepted, please try again")
-        except ValueError as e:
-            print(f"Invalid data: {e}.\n")
+def cal(smoothie):
+    print(smoothie)
 
 
-def decision(smoothie_options):
-    print(colored("Voila, here are your options:",
-                      color="yellow", on_color="on_magenta"))
-    for smoothie in smoothie_options:
-        print(smoothie)
+def main():
+    introduction()
+    countdown()
+    smoothie = smoothie_choice()
+    cal(smoothie)
 
 
 print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
 
-
-introduction()
-countdown()
-smoothie_type_selection()
+main()

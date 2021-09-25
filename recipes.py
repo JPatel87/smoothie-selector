@@ -1,25 +1,22 @@
-energizing_smoothies = {
-    "Banana and Avacado": {"Cal(kcal)": 220, "Carbs(g)": 31},
-    "Banana, Blueberry and Orange": {"Cal(kcal)": 190, "Carbs(g)": 47},
-    "Cherry and Orange": {"Cal(kcal)": 296, "Carbs(g)": 36},
-    "Rasberry and Apple": {"Cal(kcal)": 106, "Carbs(g)": 14},
-    "Pineapple, Celery and Spinach": {"Cal(kcal)": 90, "Carbs(g)": 19},
-    "Strawberry, Spinach and Orange": {"Cal(kcal)": 226, "Carbs(g)": 16},
-    "Rasberry and Avacado": {"Cal(kcal)": 231, "Carbs(g)": 13},
-    "Passion fruit and Banana": {"Cal(kcal)": 189, "Carbs(g)": 37}
+smoothies = {
+    "Banana, Mango and Spinach": {"Type": "E", "Cal(kcal)": 492, "Carbs(g)": 47, "Ingred": "FV"},
+    "Spinach, Mango and Pineapple": {"Type": "E", "Cal(kcal)": 163, "Carbs(g)": 36, "Ingred": "FV"},
+    "Cherry and Orange": {"Type": "E", "Cal(kcal)": 296, "Carbs(g)": 36, "Ingred": "F"},
+    "Rasberry and Apple": {"Type": "E", "Cal(kcal)": 106, "Carbs(g)": 14, "Ingred": "F"},
+    "Pineapple, Celery and Spinach": {"Type": "E", "Cal(kcal)": 90, "Carbs(g)": 19, "Ingred": "FV"},
+    "Strawberry, Spinach and Orange": {"Type": "E", "Cal(kcal)": 226, "Carbs(g)": 16, "Ingred": "FV"},
+    "Rasberry and Avacado": {"Type": "E", "Cal(kcal)": 231, "Carbs(g)": 13, "Ingred": "F"},
+    "Passion fruit and Banana": {"Type": "E", "Cal(kcal)": 189, "Carbs(g)": 37, "Ingred": "F"},
+    "Mango and Banana": {"Type": "I", "Cal(kcal)": 140, "Carbs(g)": 2, "Ingred": "F"},
+    "Peach and Yoghurt": {"Type": "I", "Cal(kcal)": 309, "Carbs(g)": 7, "Ingred": "F"},
+    "Bluberry, Avacado and Cocounut": {"Type": "I", "Cal(kcal)": 289, "Carbs(g)": 47, "Ingred": "F"},
+    "Pineapple and Turmeric": {"Type": "I", "Cal(kcal)": 284, "Carbs(g)": 41, "Ingred": "F"},
+    "Avacado, Banana and Kale": {"Type": "I", "Cal(kcal)": 252, "Carbs(g)": 17, "Ingred": "FV"},
+    "Apple, Carrot and Beetroot": {"Type": "I", "Cal(kcal)": 134, "Carbs(g)": 33, "Ingred": "FV"},
+    "Kale and Spinach": {"Type": "I", "Cal(kcal)": 419, "Carbs(g)": 51, "Ingred": "FV"},
+    "Apricot and Strawberry": {"Type": "I", "Cal(kcal)": 116, "Carbs(g)": 23, "Ingred": "F"}
 }
 
-immunity_smoothies = {
-    "Mango and Banana": {"Cal(kcal)": 141, "Carbs(g)": 2},
-    "Peach and Yoghurt": {"Cal(kcal)": 309, "Carbs(g)": 7},
-    "Bluberry, Avacado and Cocounut": {"Cal(kcal)": 238, "Carbs(g)": 47},
-    "Pineapple and Turmeric": {"Cal(kcal)": 180, "Carbs(g)": 41},
-    "Avacado, Banana and Kale": {"Cal(kcal)": 252, "Carbs(g)": 17},
-    "Apple, Carrot and Beetroot": {"Cal(kcal)": 134, "Carbs(g)": 33},
-    "Kale and Spinach": {"Cal(kcal)": 419, "Carbs(g)": 51},
-    "Apricot and Strawberry": {"Cal(kcal)": 116, "Carbs(g)": 23}
-
-}
 
 smoothie_ingrediants = {
     "pineapple, celery and spinach": ["1/2 cup low fat vanilla yoghurt", "3 slices pineapple", "1 stalk celery", "2 cups fresh spinach", "2 cups ice"],
