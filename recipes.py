@@ -7,14 +7,14 @@ smoothies = {
     "Strawberry, Spinach and Orange": {"Type": "E", "Cal(kcal)": 226, "Carbs(g)": 16, "Ingred": "FV"},
     "Rasberry and Avacado": {"Type": "E", "Cal(kcal)": 231, "Carbs(g)": 13, "Ingred": "F"},
     "Passion fruit and Banana": {"Type": "E", "Cal(kcal)": 189, "Carbs(g)": 37, "Ingred": "F"},
-    "Mango and Banana": {"Type": "I", "Cal(kcal)": 140, "Carbs(g)": 2, "Ingred": "F"},
     "Peach and Yoghurt": {"Type": "I", "Cal(kcal)": 309, "Carbs(g)": 7, "Ingred": "F"},
     "Bluberry, Avacado and Cocounut": {"Type": "I", "Cal(kcal)": 289, "Carbs(g)": 47, "Ingred": "F"},
-    "Pineapple and Turmeric": {"Type": "I", "Cal(kcal)": 284, "Carbs(g)": 41, "Ingred": "F"},
+    "Pineapple and Turmeric": {"Type": "I", "Cal(kcal)": 180, "Carbs(g)": 41, "Ingred": "F"},
     "Avacado, Banana and Kale": {"Type": "I", "Cal(kcal)": 252, "Carbs(g)": 17, "Ingred": "FV"},
     "Apple, Carrot and Beetroot": {"Type": "I", "Cal(kcal)": 134, "Carbs(g)": 33, "Ingred": "FV"},
     "Kale and Spinach": {"Type": "I", "Cal(kcal)": 419, "Carbs(g)": 51, "Ingred": "FV"},
-    "Apricot and Strawberry": {"Type": "I", "Cal(kcal)": 116, "Carbs(g)": 23, "Ingred": "F"}
+    "Apricot and Strawberry": {"Type": "I", "Cal(kcal)": 116, "Carbs(g)": 23, "Ingred": "F"},
+    "Spinach, Avacado and Cucumber": {"Type": "I", "Cal(kcal)": 126, "Carbs(g)": 10, "Ingred": "FV"}
 }
 
 
