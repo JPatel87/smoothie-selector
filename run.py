@@ -54,7 +54,7 @@ def smoothie_choice():
     in; energizing or immunity, if they do not answer correctly an error \
     message will appear and they will be asked to re-enter their choice.
     """
-    smoothie = smoothies
+    smoothie = smoothies.copy()
     print(colored
           ("Would you like to make an Energizing(E) or Immunity(I) smoothie?",
            color="yellow"))
@@ -120,7 +120,7 @@ def cal(smoothie):
                                  " only Y or N entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(f"Invalid entry: {e}\n", color="red")
+            print(colored(f"Invalid entry: {e}\n", color="red"))
 
     return smoothie
 
@@ -155,7 +155,7 @@ def carbs(smoothie):
                                  " only Y or N entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(f"Invalid entry: {e} \n", color="red")
+            print(colored(f"Invalid entry: {e} \n", color="red"))
 
     return smoothie
 
@@ -192,7 +192,7 @@ def fruit_or_veg(smoothie):
                                  " only F or FV entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(f"Invalid entry: {e}\n", color="red")
+            print(colored(f"Invalid entry: {e}\n", color="red"))
 
     return smoothie
 
@@ -206,21 +206,30 @@ def result(smoothie):
         print(f'{"Cal(kcal)"}/serving : {val1["Cal(kcal)"]}')
         print(f'{"Carbs(g)"}/serving : {val1["Carbs(g)"]}')
     time.sleep(2)
-    print("\nHappy with this selection?")
+    print("\nHappy with this selection?\n")
+    time.sleep(3)
+
+
+def decision():
+    print("Would you like to see the recipe (R) or start over (S)?")
+    decision = input(colored("Enter R or S\n", color="green")).upper()
+    if decision == "S":
+        print("Ok no worries, lets go again...\n")
+        main()
 
 
 def main():
-    introduction()
-    countdown()
     smoothie = smoothie_choice()
     cal(smoothie)
     carbs(smoothie)
     fruit_or_veg(smoothie)
     result(smoothie)
+    decision()
 
 
 print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
 
-
+introduction()
+countdown()
 main()
