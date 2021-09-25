@@ -16,7 +16,7 @@ def introduction():
     print(colored("What would you like to be called?",
           color="yellow", on_color="on_red"))
     while True:
-        name = input(colored("Enter name\n", color="green"))
+        name = input(colored("Enter name\n", color="green")).capitalize()
         if not name:
             print("Sorry I didn't catch that...")
             continue
@@ -218,4 +218,3 @@ print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
 
 main()
-
