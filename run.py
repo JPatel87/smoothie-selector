@@ -120,7 +120,7 @@ def cal(smoothie):
                                  " only Y or N entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(f"Invalid entry: {e}. \n")
+            print(f"Invalid entry: {e}\n", color="red")
 
     return smoothie
 
@@ -155,7 +155,7 @@ def carbs(smoothie):
                                  " only Y or N entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(f"Invalid entry: {e}. \n")
+            print(f"Invalid entry: {e} \n", color="red")
 
     return smoothie
 
@@ -192,7 +192,7 @@ def fruit_or_veg(smoothie):
                                  " only F or FV entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(f"Invalid entry: {e}. \n")
+            print(f"Invalid entry: {e}\n", color="red")
 
     return smoothie
 
