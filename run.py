@@ -14,7 +14,7 @@ def introduction():
     print("Welcome, lets start by introducing ourselves,",
           "my name is Coco Nutt, Coco for short.\n")
     print(colored("What would you like to be called?",
-          color="yellow", on_color="on_blue"))
+          color="yellow"))
     while True:
         name = input(colored("Enter name\n", color="green")).capitalize()
         if not name:
@@ -57,7 +57,7 @@ def smoothie_choice():
     smoothie = smoothies
     print(colored
           ("Would you like to make an Energizing(E) or Immunity(I) smoothie?",
-           color="yellow", on_color="on_blue"))
+           color="yellow"))
     while True:
         type = input(colored("Enter E or I\n",
                              color="green")).upper()
@@ -97,7 +97,7 @@ def cal(smoothie):
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with low"
-                  " calories (<200 kcal)?", color="yellow", on_color="on_blue"))
+                  " calories (<200 kcal)?", color="yellow"))
     while True:
         low_cal = input(colored("Enter Y or N\n", color="green")).upper()
         try:
@@ -132,7 +132,7 @@ def carbs(smoothie):
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with low"
-                  " carbs (<25 g)?", color="yellow", on_color="on_blue"))
+                  " carbs (<25 g)?", color="yellow"))
     while True:
         low_carbs = input(colored("Enter Y or N\n", color="green")).upper()
         try:
@@ -167,7 +167,7 @@ def fruit_or_veg(smoothie):
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with fruit only (F) or"
-                  " fruit and veg (FV)?", color="yellow", on_color="on_blue"))
+                  " fruit and veg (FV)?", color="yellow"))
     while True:
         composition = input(colored("Enter F or FV\n", color="green")).upper()
         try:
@@ -221,6 +221,6 @@ def main():
 
 print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
-     
+
 
 main()
