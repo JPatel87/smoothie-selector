@@ -58,10 +58,10 @@ def smoothie_choice():
           ("Would you like to make an Energizing(E) or Immunity(I) smoothie?",
            color="yellow", on_color="on_red"))
     while True:
-        smooth = input(colored("Enter E or I\n",
+        type = input(colored("Enter E or I\n",
                                color="green")).upper()
         try:
-            if smooth == "E":
+            if type == "E":
                 print("\nNice choice, these types of smoothies are great for"
                       " breakfast or after a long workout.\n")
                 time.sleep(2)
@@ -71,7 +71,7 @@ def smoothie_choice():
                     if (val1["Type"] != "E"):
                         smoothie.pop(key1)
                 break
-            elif smooth == "I":
+            elif type == "I":
                 print("\nGreat choice, these types of smoothies"
                       " will keep you going during the flu season.\n")
                 time.sleep(2)
@@ -92,6 +92,43 @@ def smoothie_choice():
 
 
 def cal(smoothie):
+    """
+    User is asked if they would like a low calorie recipe according to which \
+    smoothie type they have chosen.
+    """
+    time.sleep(2)
+    print(colored("Would you like to make a smoothie with low"
+                  " calories (<200 kcal)?", color="yellow", on_color="on_red"))
+    time.sleep(2)
+    while True:
+        low_cal = input(colored("Enter Y or N\n", color="green")).upper()
+        try:
+            if low_cal == "Y":
+                time.sleep(2)
+                print("\nLogging your choice...\n")
+                time.sleep(2)
+                for key1, val1 in list(smoothie.items()):
+                    if (val1["Cal(kcal)"] > 200):
+                        smoothie.pop(key1)
+                break
+            elif low_cal == "N":
+                time.sleep(2)
+                print("\nLogging your choice...\n")
+                time.sleep(2)
+                for key1, val1 in list(smoothie.items()):
+                    if (val1["Cal(kcal)"] < 200):
+                        smoothie.pop(key1)
+                break
+            else:
+                raise ValueError(f"You entered {low_cal},"
+                                 " only Y or N values are accepted, please"
+                                 " try again")
+        except ValueError as e:
+            print(f"Invalid data: {e}. \n")
+
+    return smoothie
+
+def carbs(smoothie):
     print(smoothie)
 
 
@@ -100,6 +137,7 @@ def main():
     countdown()
     smoothie = smoothie_choice()
     cal(smoothie)
+    carbs(smoothie)
 
 
 print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector",
