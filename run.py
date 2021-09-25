@@ -56,8 +56,8 @@ def smoothie_choice():
     """
     smoothie = smoothies.copy()
     print(colored
-          ("Would you like to make an Energizing(E) or Immunity(I) smoothie?",
-           color="yellow"))
+          ("Would you like to make an Energizing (E) or Immunity (I)"
+           " smoothie?", color="yellow"))
     while True:
         type = input(colored("Enter E or I\n",
                              color="green")).upper()
@@ -97,7 +97,7 @@ def cal(smoothie):
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with low"
-                  " calories (<200 kcal)?", color="yellow"))
+                  " calories (<200kcal)?", color="yellow"))
     while True:
         low_cal = input(colored("Enter Y or N\n", color="green")).upper()
         try:
@@ -132,7 +132,7 @@ def carbs(smoothie):
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with low"
-                  " carbs (<25 g)?", color="yellow"))
+                  " carbs (<25g)?", color="yellow"))
     while True:
         low_carbs = input(colored("Enter Y or N\n", color="green")).upper()
         try:
