@@ -9,7 +9,8 @@ from recipes import (
 def introduction():
     """
     Welcome and introductions, while loop implemented to \
-    check user name input. Command line purpose explained.
+    check user name input; except block executed to handle error \
+    if input is not valid. Command line purpose explained.
     """
     print("Welcome to Smoothie Selector!\n")
     time.sleep(2)
@@ -27,10 +28,11 @@ def introduction():
                 print(f"\nHello {name}, nice to meet you! Hope you are"
                       " having a great day!\n")
                 time.sleep(2)
-                print("I am here to help you decide on what smooothie to make.\n")
+                print("I am here to help you decide on what smooothie"
+                      " to make.\n")
                 time.sleep(2)
                 print("I will ask you a series of questions and"
-                      " then offer you a recipe suggestion.\n")
+                      " then offer you a smoothie suggestion.\n")
                 time.sleep(2)
                 print("You will have the option to go with my"
                       " suggestion or start again.\n")
@@ -51,10 +53,10 @@ def introduction():
 
 def countdown():
     """
-    Countdown timer added to start smoothie selection process, using imported
+    Countdown to start smoothie selection process, using import
     time module.
     """
-    t = 2
+    t = 5
     while t > 0:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
@@ -63,11 +65,12 @@ def countdown():
         t -= 1
 
 
-def smoothie_choice():
+def smoothie_type():
     """
     User is asked to decide what type of smoothie recipe they are interested \
-    in; energizing or immunity, if they do not answer correctly an error \
-    message will appear and they will be asked to re-enter their choice.
+    in; energizing or immunity. while loop implemented to \
+    check user input; except block executed to handle error if input is \
+    not valid.
     """
     smoothie = smoothies.copy()
     print(colored
@@ -79,7 +82,7 @@ def smoothie_choice():
         choice_one = "E"
         choice_two = "I"
         if type == choice_one:
-            print("Nice choice, these types of smoothies are great for"
+            print("\nNice choice, these types of smoothies are great for"
                   " breakfast or after a long workout.\n")
             time.sleep(2)
             print("Logging your choice...\n")
@@ -103,6 +106,9 @@ def smoothie_choice():
 
 
 def validate_data(input, choice_one, choice_two):
+    """
+    Error handling function, to handle invalid input entries
+    """
     try:
         if input != choice_one or input != choice_two:
             raise ValueError(f"You entered {input},"
@@ -115,9 +121,12 @@ def validate_data(input, choice_one, choice_two):
 
 def cal(smoothie):
     """
-    User is asked if they would like a low calorie recipe according to which \
-    smoothie type they have chosen.
+    User is asked to decide whether they are interested \
+    in a low calories smoothie. While loop implemented to \
+    check user input. Validate data function run to handle error, \
+    if input is not valid.
     """
+
     time.sleep(2)
     print(colored("Would you like to make a smoothie with low"
                   " calories (<200kcal)?", "yellow"))
@@ -147,8 +156,10 @@ def cal(smoothie):
 
 def carbs(smoothie):
     """
-    User is asked if they would like a low carb recipe according to which \
-    calorie level they have chosen.
+    User is asked to decide whether they are interested \
+    in a low carbohydrate smoothie. While loop implemented to \
+    check user input. Validate data function run to handle error, \
+    if input is not valid.
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with low"
@@ -177,10 +188,12 @@ def carbs(smoothie):
     return smoothie
 
 
-def fruit_or_veg(smoothie):
+def fruit_veg(smoothie):
     """
-    User is asked if they would like a fruit or fruit and veg recipe \
-    according to which carb level they have chosen.
+    User is asked to decide whether they are interested \
+    in a fruit or fruit and veg smoothie. While loop implemented to \
+    check user input. Validate data function run to handle error, \
+    if input is not valid.
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with fruit only (F) or"
@@ -212,11 +225,16 @@ def fruit_or_veg(smoothie):
 
 
 def result(smoothie):
-    print("Great, I have a recipe that ticks all your boxes...\n")
+    """
+    User is shown the smoothie, with calorie and carbohydrate data \
+    that best fits their responses \
+    from previous questions.
+    """
+    print("Great, I have a smoothie that ticks all your boxes...\n")
     time.sleep(2)
     for key1, val1 in smoothie.items():
         smoothie_option = key1
-        print(colored(f'{key1} smoothie:',
+        print(colored(f"{key1} smoothie:",
                       "yellow", "on_magenta"))
         print(f'{"Cal(kcal)"}/serving : {val1["Cal(kcal)"]}')
         print(f'{"Carbs(g)"}/serving : {val1["Carbs(g)"]}')
@@ -226,20 +244,31 @@ def result(smoothie):
 
 
 def ingrediants(smoothie_option):
+    """
+    User is shown the smoothie recipe ingrediants,\
+    serving size and method.
+    """
     print("\nHere comes the recipe...\n")
     time.sleep(2)
     for key, values in smoothie_ingrediants.items():
         if key == smoothie_option:
             print(*values, sep='\n')
-    print("\nTo make this smoothie, wash all fruits and vegetables,"
-          " cut any large ingrediants into small cubes,"
-          " blend and enjoy!\n")
-    time.sleep(2)    
+    print("\nTo make this smoothie, wash all fruits and/or"
+          " vegetables, cut any large ingrediants into"
+          " small cubes, blend and enjoy!\n")
+    time.sleep(2)
 
 
 def decision():
+    """
+    User is asked whether they are happy with the suggestion \
+    or whether they want to start again.\
+    While loop implemented to check user input.\
+    Validate data function run to handle error, \
+    if input is not valid.
+    """
     print(colored("Happy with the selection (H)?"
-                  " or would you like to start again (S)?",
+                  " or would you like to start over (S)?",
                   "yellow"))
     while True:
         decision = input(colored("Enter H or S\n", "green")).upper()
@@ -248,7 +277,9 @@ def decision():
         choice_two = "S"
         if decision == choice_one:
             print("\nWondeful, hope you enjoy the smoothie!\n")
+            time.sleep(1)
             print("Come and visit again soon!\n")
+            time.sleep(1)
             print("Happy blending!")
             break
         elif decision == choice_two:
@@ -261,17 +292,21 @@ def decision():
 
 
 def main():
-    smoothie = smoothie_choice()
+    """
+    Main function to run all functions
+    """
+    smoothie = smoothie_type()
     cal(smoothie)
     carbs(smoothie)
-    fruit_or_veg(smoothie)
+    fruit_veg(smoothie)
     smoothie_option = result(smoothie)
     ingrediants(smoothie_option)
     decision()
 
 
-print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector ",
+print("\U0001F34A" " \U0001F952" " \U0001F34F " "SMOOTHIE SELECTOR",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
+
 
 introduction()
 countdown()

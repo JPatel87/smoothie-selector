@@ -51,7 +51,7 @@ smoothie_ingrediants = {
                                      "2 cups water"],
     "Cherry and Orange": ["SERVES 2:",
                           "2 cups frozen unsweetened pitted cherries",
-                          "1/2 cup fresh orange juice"
+                          "1/2 cup fresh orange juice",
                           "1/2 cup ground almonds",
                           "2 tbsp flaxseed meal",
                           "1/2 tsp pure almond extract"],
