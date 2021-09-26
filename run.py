@@ -16,7 +16,8 @@ def introduction():
     print(colored("What would you like to be called?",
           color="yellow"))
     while True:
-        name = input(colored("Enter name\n", color="green")).capitalize()
+        name = input(colored("Enter name\n",
+                             "green")).capitalize()
         if not name:
             print("Sorry I didn't catch that...")
             continue
@@ -212,8 +213,8 @@ def result(smoothie):
 
 
 def decision(smoothie_option):
-    print("Would you like to see the recipe (R) or start again (S)?",
-          color="yellow")
+    print(colored("\nWould you like to see the recipe (R) or start again (S)?",
+          color="yellow"))
     decision = input(colored("Enter R or S\n", color="green")).upper()
     if decision == "S":
         print("Ok no worries, lets go again...\n")
