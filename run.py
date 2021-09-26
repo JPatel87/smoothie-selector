@@ -23,7 +23,7 @@ def introduction():
         if name:
             time.sleep(1)
             print(f"\nHello {name}, nice to meet you! Hope you are having a"
-                  " great day!.\n")
+                  " great day!\n")
             time.sleep(2)
             print("I am here to help you decide on what smooothie to make"
                   " today.\n")
@@ -63,7 +63,7 @@ def smoothie_choice():
                              color="green")).upper()
         try:
             if type == "E":
-                print("\nNice choice, these types of smoothies are great for"
+                print("Nice choice, these types of smoothies are great for"
                       " breakfast or after a long workout.\n")
                 time.sleep(2)
                 print("Logging your choice...\n")
@@ -202,18 +202,18 @@ def result(smoothie):
     time.sleep(2)
     for key1, val1 in smoothie.items():
         smoothie_option = key1
-        print(colored(f'{key1} smoothie',
+        print(colored(f'{key1} smoothie:',
                       color="yellow", on_color="on_magenta"))
         print(f'{"Cal(kcal)"}/serving : {val1["Cal(kcal)"]}')
         print(f'{"Carbs(g)"}/serving : {val1["Carbs(g)"]}')
     time.sleep(2)
-    print("\nHappy with this selection?\n")
-    time.sleep(3)
+
     return smoothie_option
 
 
 def decision(smoothie_option):
-    print("Would you like to see the recipe (R) or start over (S)?")
+    print("Would you like to see the recipe (R) or start again (S)?",
+          color="yellow")
     decision = input(colored("Enter R or S\n", color="green")).upper()
     if decision == "S":
         print("Ok no worries, lets go again...\n")
@@ -225,7 +225,7 @@ def decision(smoothie_option):
               " blend and enjoy!\n")
         for key, values in smoothie_ingrediants.items():
             if key == smoothie_option:
-                print(colored(f'{key}:', color="yellow",
+                print(colored(f'{key} smoothie:', color="yellow",
                               on_color="on_magenta"))
                 print(*values, sep='\n')
 
