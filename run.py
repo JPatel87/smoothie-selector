@@ -23,7 +23,7 @@ def introduction():
         if name:
             time.sleep(1)
             print(f"\nHello {name}, nice to meet you! Hope you are having a"
-                  " great day.\n")
+                  " great day!.\n")
             time.sleep(2)
             print("I am here to help you decide on what smooothie to make"
                   " today.\n")
@@ -201,6 +201,7 @@ def result(smoothie):
     print("Great, I have a recipe that ticks all your boxes...\n")
     time.sleep(2)
     for key1, val1 in smoothie.items():
+        smoothie_option = key1
         print(colored(f'{key1} smoothie',
                       color="yellow", on_color="on_magenta"))
         print(f'{"Cal(kcal)"}/serving : {val1["Cal(kcal)"]}')
@@ -208,14 +209,25 @@ def result(smoothie):
     time.sleep(2)
     print("\nHappy with this selection?\n")
     time.sleep(3)
+    return smoothie_option
 
 
-def decision():
+def decision(smoothie_option):
     print("Would you like to see the recipe (R) or start over (S)?")
     decision = input(colored("Enter R or S\n", color="green")).upper()
     if decision == "S":
         print("Ok no worries, lets go again...\n")
         main()
+    if decision == "R":
+        print("\nVoila...\n")
+        print("To make this smoothie, wash all fruits and vegetables,"
+              " cut any large ingrediants into small cubes,"
+              " blend and enjoy!\n")
+        for key, values in smoothie_ingrediants.items():
+            if key == smoothie_option:
+                print(colored(f'{key}:', color="yellow",
+                              on_color="on_magenta"))
+                print(*values, sep='\n')
 
 
 def main():
@@ -223,8 +235,8 @@ def main():
     cal(smoothie)
     carbs(smoothie)
     fruit_or_veg(smoothie)
-    result(smoothie)
-    decision()
+    smoothie_option = result(smoothie)
+    decision(smoothie_option)
 
 
 print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector",
