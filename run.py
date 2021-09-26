@@ -59,7 +59,7 @@ def countdown():
     time module.
     """
     # Timer code from geeksforgeeks.org
-    t = 5
+    t = 10
     while t > 0:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
@@ -263,7 +263,7 @@ def recipe(smoothie_option):
     print("\nMETHOD:")
     print("1) Wash all fruits and/or vegetables.")
     print("2) Cut any large ingrediants into small cubes.")
-    print("3) Blend and enjoy!\n")
+    print("3) Blitz everything together in a blender and enjoy!\n")
     time.sleep(4)
 
 
