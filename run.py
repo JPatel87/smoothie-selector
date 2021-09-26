@@ -238,6 +238,7 @@ def result(smoothie):
     """
     time.sleep(2)
     print("Great, I have a smoothie that ticks all your boxes...\n")
+    time.sleep(2)
     for key1, val1 in smoothie.items():
         smoothie_option = key1
         print(colored(f"{key1} smoothie:",
