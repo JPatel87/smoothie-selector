@@ -25,7 +25,7 @@ def introduction():
                        " great day!\n")
                 time.sleep(2)
                 print("I am here to help you decide on what smooothie to make"
-                      " today, by asking you a series of questions.\n")
+                      " today by asking you a series of questions.\n")
                 time.sleep(2)
                 print("Get yourself a pen and paper, we will be starting"
                       " soon...\n")
@@ -68,33 +68,41 @@ def smoothie_choice():
     while True:
         type = input(colored("Enter E or I\n",
                              "green")).upper()
-        try:
-            if type == "E":
-                print("Nice choice, these types of smoothies are great for"
-                      " breakfast or after a long workout.\n")
-                time.sleep(2)
-                print("Logging your choice...\n")
-                for key1, val1 in list(smoothie.items()):
-                    if (val1["Type"] != "E"):
-                        smoothie.pop(key1)
-                break
-            elif type == "I":
-                print("\nGreat choice, these types of smoothies"
-                      " will keep you going during the flu season.\n")
-                print("Logging your choice...\n")
-                time.sleep(1)
-                for key1, val1 in list(smoothie.items()):
-                    if (val1["Type"] != "I"):
-                        smoothie.pop(key1)
-                break
-            else:
-                raise ValueError(f"You entered {type},"
-                                 " only E or I entries are valid, please"
-                                 " try again")
-        except ValueError as e:
-            print(colored(f"Invalid entry: {e}\n", "red", attrs=['bold']))
+        choice_one = "E"
+        choice_two = "I"
+        if type == choice_one:
+            print("Nice choice, these types of smoothies are great for"
+                  " breakfast or after a long workout.\n")
+            time.sleep(2)
+            print("Logging your choice...\n")
+            for key1, val1 in list(smoothie.items()):
+                if (val1["Type"] != "E"):
+                    smoothie.pop(key1)
+            break
+        elif type == choice_two:
+            print("\nGreat choice, these types of smoothies"
+                  " will keep you going during the flu season.\n")
+            print("Logging your choice...\n")
+            time.sleep(1)
+            for key1, val1 in list(smoothie.items()):
+                if (val1["Type"] != "I"):
+                    smoothie.pop(key1)
+            break
+        else:
+            validate_data(type, choice_one, choice_two)
 
     return smoothie
+
+
+def validate_data(input, choice_one, choice_two):
+    try:
+        if input != choice_one or input != choice_two:
+            raise ValueError(f"You entered {input},"
+                             f" only {choice_one} or {choice_two}"
+                             " entries are valid, please try again.")
+    except ValueError as e:
+        print(colored(f"Invalid entry: {e}\n", "red", attrs=['bold']))
+        return False
 
 
 def cal(smoothie):
@@ -107,27 +115,24 @@ def cal(smoothie):
                   " calories (<200kcal)?", "yellow"))
     while True:
         low_cal = input(colored("Enter Y or N\n", "green")).upper()
-        try:
-            if low_cal == "Y":
-                time.sleep(2)
-                print("\nLogging your choice...\n")
-                for key1, val1 in list(smoothie.items()):
-                    if (val1["Cal(kcal)"] > 200):
-                        smoothie.pop(key1)
-                break
-            elif low_cal == "N":
-                time.sleep(2)
-                print("\nLogging your choice...\n")
-                for key1, val1 in list(smoothie.items()):
-                    if (val1["Cal(kcal)"] < 200):
-                        smoothie.pop(key1)
-                break
-            else:
-                raise ValueError(f"You entered {low_cal},"
-                                 " only Y or N entries are valid, please"
-                                 " try again")
-        except ValueError as e:
-            print(colored(f"Invalid entry: {e}\n", "red", attrs=['bold']))
+        choice_one = "Y"
+        choice_two = "N"
+        if low_cal == choice_one:
+            time.sleep(2)
+            print("\nLogging your choice...\n")
+            for key1, val1 in list(smoothie.items()):
+                if (val1["Cal(kcal)"] > 200):
+                    smoothie.pop(key1)
+            break
+        elif low_cal == choice_two:
+            time.sleep(2)
+            print("\nLogging your choice...\n")
+            for key1, val1 in list(smoothie.items()):
+                if (val1["Cal(kcal)"] < 200):
+                    smoothie.pop(key1)
+            break
+        else:
+            validate_data(low_cal, choice_one, choice_two)
 
     return smoothie
 
@@ -142,27 +147,24 @@ def carbs(smoothie):
                   " carbs (<25g)?", "yellow"))
     while True:
         low_carbs = input(colored("Enter Y or N\n", "green")).upper()
-        try:
-            if low_carbs == "Y":
-                time.sleep(2)
-                print("\nLogging your choice...\n")
-                for key1, val1 in list(smoothie.items()):
-                    if (val1["Carbs(g)"] > 25):
-                        smoothie.pop(key1)
-                break
-            elif low_carbs == "N":
-                time.sleep(2)
-                print("\nLogging your choice...\n")
-                for key1, val1 in list(smoothie.items()):
-                    if (val1["Carbs(g)"] < 25):
-                        smoothie.pop(key1)
-                break
-            else:
-                raise ValueError(f"You entered {low_carbs},"
-                                 " only Y or N entries are valid, please"
-                                 " try again")
-        except ValueError as e:
-            print(colored(f"Invalid entry: {e} \n", "red", attrs=['bold']))
+        choice_one = "Y"
+        choice_two = "N"
+        if low_carbs == choice_one:
+            time.sleep(2)
+            print("\nLogging your choice...\n")
+            for key1, val1 in list(smoothie.items()):
+                if (val1["Carbs(g)"] > 25):
+                    smoothie.pop(key1)
+            break
+        elif low_carbs == choice_two:
+            time.sleep(2)
+            print("\nLogging your choice...\n")
+            for key1, val1 in list(smoothie.items()):
+                if (val1["Carbs(g)"] < 25):
+                    smoothie.pop(key1)
+            break
+        else:
+            validate_data(low_carbs, choice_one, choice_two)
 
     return smoothie
 
@@ -177,29 +179,26 @@ def fruit_or_veg(smoothie):
                   " fruit and veg (FV)?", "yellow"))
     while True:
         composition = input(colored("Enter F or FV\n", "green")).upper()
-        try:
-            if composition == "F":
-                time.sleep(2)
-                print("\nLogging your choice...\n")
-                time.sleep(1)
-                for key1, val1 in list(smoothie.items()):
-                    if (val1["Ingred"] != "F"):
-                        smoothie.pop(key1)
-                break
-            elif composition == "FV":
-                time.sleep(1)
-                print("\nLogging your choice...\n")
-                time.sleep(2)
-                for key1, val1 in list(smoothie.items()):
-                    if (val1["Ingred"] != "FV"):
-                        smoothie.pop(key1)
-                break
-            else:
-                raise ValueError(f"You entered {composition},"
-                                 " only F or FV entries are valid, please"
-                                 " try again")
-        except ValueError as e:
-            print(colored(f"Invalid entry: {e}\n", "red", attrs=['bold']))
+        choice_one = "F"
+        choice_two = "FV"
+        if composition == choice_one:
+            time.sleep(2)
+            print("\nLogging your choice...\n")
+            time.sleep(1)
+            for key1, val1 in list(smoothie.items()):
+                if (val1["Ingred"] != "F"):
+                    smoothie.pop(key1)
+            break
+        elif composition == choice_two:
+            time.sleep(1)
+            print("\nLogging your choice...\n")
+            time.sleep(2)
+            for key1, val1 in list(smoothie.items()):
+                if (val1["Ingred"] != "FV"):
+                    smoothie.pop(key1)
+            break
+        else:
+            validate_data(composition, choice_one, choice_two)
 
     return smoothie
 
@@ -221,20 +220,26 @@ def result(smoothie):
 def decision(smoothie_option):
     print(colored("\nWould you like to see the recipe (R) or start again (S)?",
           "yellow"))
-    decision = input(colored("Enter R or S\n", "green")).upper()
-    if decision == "S":
-        print("Ok no worries, lets go again...\n")
-        main()
-    if decision == "R":
-        print("\nVoila...\n")
-        print("To make this smoothie, wash all fruits and vegetables,"
-              " cut any large ingrediants into small cubes,"
-              " blend and enjoy!\n")
-        for key, values in smoothie_ingrediants.items():
-            if key == smoothie_option:
-                print(colored(f'{key} smoothie:', "yellow",
-                              "on_magenta"))
-                print(*values, sep='\n')
+    while True:
+        decision = input(colored("Enter R or S\n", "green")).upper()
+        choice_one = "S"
+        choice_two = "R"
+        if decision == choice_one:
+            print("Ok no worries, lets go again...\n")
+            main()
+        elif decision == choice_two:
+            print("\nVoila...\n")
+            print("To make this smoothie, wash all fruits and vegetables,"
+                  " cut any large ingrediants into small cubes,"
+                  " blend and enjoy!\n")
+            for key, values in smoothie_ingrediants.items():
+                if key == smoothie_option:
+                    print(colored(f'{key} smoothie:', "yellow",
+                                  "on_magenta"))
+                    print(*values, sep='\n')
+            break
+        else:
+            validate_data(decision, choice_one, choice_two)
 
 
 def main():
