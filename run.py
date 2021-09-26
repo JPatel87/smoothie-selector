@@ -8,12 +8,15 @@ from recipes import (
 
 def introduction():
     """
-    Introductions, while loop implemented to check for user name.
-    Project purpose explained.
+    Welcome and introductions, while loop implemented to \
+    check user name input. Command line purpose explained.
     """
-    print("Welcome, lets start by introducing ourselves,",
-          "my name is Coco Nutt, Coco for short.\n")
-    print(colored("What would you like to be called?",
+    print("Welcome to Smoothie Selector!\n")
+    time.sleep(2)
+    print("Lets start by introducing ourselves,"
+          " my name is Coco Nutt.\n")
+    time.sleep(2)
+    print(colored("What is your name?",
           "yellow"))
     while True:
         try:
@@ -22,10 +25,15 @@ def introduction():
             if name.isalpha():
                 time.sleep(1)
                 print(f"\nHello {name}, nice to meet you! Hope you are"
-                       " having a great day!\n")
+                      " having a great day!\n")
                 time.sleep(2)
-                print("I am here to help you decide on what smooothie to make"
-                      " today by asking you a series of questions.\n")
+                print("I am here to help you decide on what smooothie to make.\n")
+                time.sleep(2)
+                print("I will ask you a series of questions and"
+                      " then offer you a recipe suggestion.\n")
+                time.sleep(2)
+                print("You will have the option to go with my"
+                      " suggestion or start again.\n")
                 time.sleep(2)
                 print("Get yourself a pen and paper, we will be starting"
                       " soon...\n")
