@@ -21,8 +21,8 @@ def introduction():
                                  "green")).capitalize()
             if name.isalpha():
                 time.sleep(1)
-                print(f"\nHello {name}, nice to meet you! Hope you are having a"
-                       " great day!\n")
+                print(f"\nHello {name}, nice to meet you! Hope you are"
+                       " having a great day!\n")
                 time.sleep(2)
                 print("I am here to help you decide on what smooothie to make"
                       " today by asking you a series of questions.\n")
@@ -217,26 +217,36 @@ def result(smoothie):
     return smoothie_option
 
 
-def decision(smoothie_option):
-    print(colored("\nWould you like to see the recipe (R) or start again (S)?",
-          "yellow"))
+def ingrediants(smoothie_option):
+    print("\nHere comes the recipe...\n")
+    time.sleep(2)
+    for key, values in smoothie_ingrediants.items():
+        if key == smoothie_option:
+            print(*values, sep='\n')
+    print("\nTo make this smoothie, wash all fruits and vegetables,"
+          " cut any large ingrediants into small cubes,"
+          " blend and enjoy!\n")
+    time.sleep(2)    
+
+
+def decision():
+    print(colored("Happy with the selection (H)?"
+                  " or would you like to start again (S)?",
+                  "yellow"))
     while True:
-        decision = input(colored("Enter R or S\n", "green")).upper()
-        choice_one = "S"
-        choice_two = "R"
+        decision = input(colored("Enter H or S\n", "green")).upper()
+        time.sleep(2)
+        choice_one = "H"
+        choice_two = "S"
         if decision == choice_one:
-            print("Ok no worries, lets go again...\n")
-            main()
+            print("\nWondeful, hope you enjoy the smoothie!\n")
+            print("Come and visit again soon!\n")
+            print("Happy blending!")
+            break
         elif decision == choice_two:
-            print("\nVoila...\n")
-            print("To make this smoothie, wash all fruits and vegetables,"
-                  " cut any large ingrediants into small cubes,"
-                  " blend and enjoy!\n")
-            for key, values in smoothie_ingrediants.items():
-                if key == smoothie_option:
-                    print(colored(f'{key} smoothie:', "yellow",
-                                  "on_magenta"))
-                    print(*values, sep='\n')
+            print("Ok no worries, lets go again...\n")
+            time.sleep(2)
+            main()
             break
         else:
             validate_data(decision, choice_one, choice_two)
@@ -248,7 +258,8 @@ def main():
     carbs(smoothie)
     fruit_or_veg(smoothie)
     smoothie_option = result(smoothie)
-    decision(smoothie_option)
+    ingrediants(smoothie_option)
+    decision()
 
 
 print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector ",
