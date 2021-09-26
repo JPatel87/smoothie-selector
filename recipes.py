@@ -1,3 +1,4 @@
+# Smoothie nutrition and composition data
 smoothies = {
     "Banana, Mango and Spinach": {"Type": "E", "Cal(kcal)": 492,
                                   "Carbs(g)": 47, "Ingred": "FV"},
@@ -33,7 +34,7 @@ smoothies = {
                                       "Carbs(g)": 10, "Ingred": "FV"}
 }
 
-
+# smoothie ingrediants
 smoothie_ingrediants = {
     "Banana, Mango and Spinach": ["SERVES 1:",
                                   "1 cup sweetened almond milk",
@@ -96,7 +97,7 @@ smoothie_ingrediants = {
                                  "1 avocado", "1 banana", "1 cup baby kale",
                                  "1 1/2 cup almond milk",
                                  "2 tbsp vanilla protein powder"],
-    "Apple, Carrot, Beetroot and Orange": ["SERVES 2:"
+    "Apple, Carrot, Beetroot and Orange": ["SERVES 2:",
                                            "1 red beetroot", "3 carrots",
                                            "1 orange", "1 apple"
                                            "1 2inch piece ginger",

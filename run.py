@@ -1,3 +1,4 @@
+# Import modules
 import time
 from termcolor import colored
 from recipes import (
@@ -44,6 +45,7 @@ def introduction():
             if not name:
                 print("Sorry I didn't catch that...")
                 continue
+            # Below code inspired from CodeInstitute, love sandwiches project.
             else:
                 raise ValueError(f"You entered {name},"
                                  " please enter your name in letters only.")
@@ -56,6 +58,7 @@ def countdown():
     Countdown to start smoothie selection process, using import
     time module.
     """
+    # Timer code from geeksforgeeks.org
     t = 5
     while t > 0:
         mins, secs = divmod(t, 60)
@@ -76,6 +79,7 @@ def smoothie_type():
     print(colored
           ("Would you like to make an Energizing (E) or Immunity (I)"
            " smoothie?", "yellow"))
+    # While loop updates smoothie dictionary based on user input.
     while True:
         type = input(colored("Enter E or I\n",
                              "green")).upper()
@@ -93,8 +97,9 @@ def smoothie_type():
         elif type == choice_two:
             print("\nGreat, these types of smoothies"
                   " will keep you going during the flu season.\n")
+            time.sleep(2)
             print("Logging your choice...\n")
-            time.sleep(1)
+            # Below code inspired from CodeInstitute, love sandwiches project
             for key1, val1 in list(smoothie.items()):
                 if (val1["Type"] != "I"):
                     smoothie.pop(key1)
@@ -107,8 +112,9 @@ def smoothie_type():
 
 def validate_data(input, choice_one, choice_two):
     """
-    Error handling function, to handle invalid input entries
+    Error handling function, to handle invalid input entries.
     """
+    # Code inspired from CodeInstitute, love sandwiches project.
     try:
         if input != choice_one or input != choice_two:
             raise ValueError(f"You entered {input},"
@@ -126,10 +132,10 @@ def cal(smoothie):
     check user input. Validate data function run to handle error, \
     if input is not valid.
     """
-
     time.sleep(2)
     print(colored("Would you like to make a smoothie with low"
                   " calories (<200kcal)?", "yellow"))
+    # While loop updates smoothie dictionary based on user input.
     while True:
         low_cal = input(colored("Enter Y or N\n", "green")).upper()
         choice_one = "Y"
@@ -164,6 +170,7 @@ def carbs(smoothie):
     time.sleep(2)
     print(colored("Would you like to make a smoothie with low"
                   " carbs (<25g)?", "yellow"))
+    # While loop updates smoothie dictionary based on user input
     while True:
         low_carbs = input(colored("Enter Y or N\n", "green")).upper()
         choice_one = "Y"
@@ -198,6 +205,7 @@ def fruit_veg(smoothie):
     time.sleep(2)
     print(colored("Would you like to make a smoothie with fruit only (F) or"
                   " fruit and veg (FV)?", "yellow"))
+    # While loop updates smoothie dictionary based on user input.
     while True:
         composition = input(colored("Enter F or FV\n", "green")).upper()
         choice_one = "F"
@@ -205,15 +213,13 @@ def fruit_veg(smoothie):
         if composition == choice_one:
             time.sleep(2)
             print("\nLogging your choice...\n")
-            time.sleep(1)
             for key1, val1 in list(smoothie.items()):
                 if (val1["Ingred"] != "F"):
                     smoothie.pop(key1)
             break
         elif composition == choice_two:
-            time.sleep(1)
-            print("\nLogging your choice...\n")
             time.sleep(2)
+            print("\nLogging your choice...\n")
             for key1, val1 in list(smoothie.items()):
                 if (val1["Ingred"] != "FV"):
                     smoothie.pop(key1)
@@ -226,33 +232,33 @@ def fruit_veg(smoothie):
 
 def result(smoothie):
     """
-    User is shown the smoothie, with calorie and carbohydrate data \
-    that best fits their responses \
-    from previous questions.
+    User is shown the smoothie, with calorie, carbohydrate \
+    and composition preference data that best fits their \
+    responses from previous questions.
     """
-    print("Great, I have a smoothie that ticks all your boxes...\n")
     time.sleep(2)
+    print("Great, I have a smoothie that ticks all your boxes...\n")
     for key1, val1 in smoothie.items():
         smoothie_option = key1
         print(colored(f"{key1} smoothie:",
                       "yellow", "on_magenta"))
         print(f'{"Cal(kcal)"}/serving : {val1["Cal(kcal)"]}')
         print(f'{"Carbs(g)"}/serving : {val1["Carbs(g)"]}')
-    time.sleep(2)
 
     return smoothie_option
 
 
-def ingrediants(smoothie_option):
+def recipe(smoothie_option):
     """
     User is shown the smoothie recipe ingrediants,\
     serving size and method.
     """
+    time.sleep(2)
     print("\nHere comes the recipe...\n")
     time.sleep(2)
     for key, values in smoothie_ingrediants.items():
         if key == smoothie_option:
-            print(*values, sep='\n')
+            print(*values, sep='\n')  # code inspired from codegrepper
     print("\nMETHOD:")
     print("1) Wash all fruits and/or vegetables.")
     print("2) Cut any large ingrediants into small cubes.")
@@ -273,17 +279,18 @@ def decision():
                   "yellow"))
     while True:
         decision = input(colored("Enter H or S\n", "green")).upper()
-        time.sleep(2)
         choice_one = "H"
         choice_two = "S"
         if decision == choice_one:
+            time.sleep(2)
             print("\nWondeful, hope you enjoy the smoothie!\n")
-            time.sleep(1)
+            time.sleep(2)
             print("Come and visit again soon!\n")
-            time.sleep(1)
+            time.sleep(2)
             print("Happy blending!")
             break
         elif decision == choice_two:
+            time.sleep(2)
             print("\nOk no worries, lets go again...\n")
             time.sleep(2)
             main()
@@ -301,11 +308,12 @@ def main():
     carbs(smoothie)
     fruit_veg(smoothie)
     smoothie_option = result(smoothie)
-    ingrediants(smoothie_option)
+    recipe(smoothie_option)
     decision()
 
 
-print("\U0001F34A" " \U0001F952" " \U0001F34F ", "SMOOTHIE SELECTOR",
+# Used unicode consortium names for emojis.
+print("\U0001F34A" " \U0001F952" " \U0001F34F", "SMOOTHIE SELECTOR",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
 
 
