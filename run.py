@@ -82,8 +82,8 @@ def smoothie_type():
         choice_one = "E"
         choice_two = "I"
         if type == choice_one:
-            print("\nNice choice, these types of smoothies are great for"
-                  " breakfast or after a long workout.\n")
+            print("\nNice, these types of smoothies are great for"
+                  " breakfast or after workouts.\n")
             time.sleep(2)
             print("Logging your choice...\n")
             for key1, val1 in list(smoothie.items()):
@@ -91,7 +91,7 @@ def smoothie_type():
                     smoothie.pop(key1)
             break
         elif type == choice_two:
-            print("\nGreat choice, these types of smoothies"
+            print("\nGreat, these types of smoothies"
                   " will keep you going during the flu season.\n")
             print("Logging your choice...\n")
             time.sleep(1)
@@ -253,10 +253,11 @@ def ingrediants(smoothie_option):
     for key, values in smoothie_ingrediants.items():
         if key == smoothie_option:
             print(*values, sep='\n')
-    print("\nTo make this smoothie, wash all fruits and/or"
-          " vegetables, cut any large ingrediants into"
-          " small cubes, blend and enjoy!\n")
-    time.sleep(2)
+    print("\nMETHOD:")
+    print("1) Wash all fruits and/or vegetables.")
+    print("2) Cut any large ingrediants into small cubes.")
+    print("3) Blend and enjoy!\n")
+    time.sleep(4)
 
 
 def decision():
@@ -283,7 +284,7 @@ def decision():
             print("Happy blending!")
             break
         elif decision == choice_two:
-            print("Ok no worries, lets go again...\n")
+            print("\nOk no worries, lets go again...\n")
             time.sleep(2)
             main()
             break
@@ -304,7 +305,7 @@ def main():
     decision()
 
 
-print("\U0001F34A" " \U0001F952" " \U0001F34F " "SMOOTHIE SELECTOR",
+print("\U0001F34A" " \U0001F952" " \U0001F34F ", "SMOOTHIE SELECTOR",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
 
 

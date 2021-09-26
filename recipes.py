@@ -65,7 +65,7 @@ smoothie_ingrediants = {
                                       "1/2 cup low fat vanilla yoghurt",
                                       "3 slices pineapple", "1 stalk celery",
                                       "2 cups fresh spinach", "2 cups ice"],
-    "Strawberry, Spinach and Orange": ["SERVES 2"
+    "Strawberry, Spinach and Orange": ["SERVES 2:",
                                        "160g ripe strawberries",
                                        "160g baby spinach", "1 avocado",
                                        "150ml bio yoghurt", "2 small oranges",
