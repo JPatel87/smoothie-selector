@@ -14,25 +14,31 @@ def introduction():
     print("Welcome, lets start by introducing ourselves,",
           "my name is Coco Nutt, Coco for short.\n")
     print(colored("What would you like to be called?",
-          color="yellow"))
+          "yellow"))
     while True:
-        name = input(colored("Enter name\n",
-                             "green")).capitalize()
-        if not name:
-            print("Sorry I didn't catch that...")
-            continue
-        if name:
-            time.sleep(1)
-            print(f"\nHello {name}, nice to meet you! Hope you are having a"
-                  " great day!\n")
-            time.sleep(2)
-            print("I am here to help you decide on what smooothie to make"
-                  " today.\n")
-            time.sleep(2)
-            print("Get yourself a pen and paper, we will be starting"
-                  " soon...\n")
-            time.sleep(2)
-            break
+        try:
+            name = input(colored("Enter name\n",
+                                 "green")).capitalize()
+            if name.isalpha():
+                time.sleep(1)
+                print(f"\nHello {name}, nice to meet you! Hope you are having a"
+                       " great day!\n")
+                time.sleep(2)
+                print("I am here to help you decide on what smooothie to make"
+                      " today, by asking you a series of questions.\n")
+                time.sleep(2)
+                print("Get yourself a pen and paper, we will be starting"
+                      " soon...\n")
+                time.sleep(2)
+                break
+            if not name:
+                print("Sorry I didn't catch that...")
+                continue
+            else:
+                raise ValueError(f"You entered {name},"
+                                 " please enter your name in letters only.")
+        except ValueError as e:
+            print(colored(f"Invalid entry: {e}\n", "red", attrs=['bold']))
 
 
 def countdown():
@@ -58,10 +64,10 @@ def smoothie_choice():
     smoothie = smoothies.copy()
     print(colored
           ("Would you like to make an Energizing (E) or Immunity (I)"
-           " smoothie?", color="yellow"))
+           " smoothie?", "yellow"))
     while True:
         type = input(colored("Enter E or I\n",
-                             color="green")).upper()
+                             "green")).upper()
         try:
             if type == "E":
                 print("Nice choice, these types of smoothies are great for"
@@ -86,7 +92,7 @@ def smoothie_choice():
                                  " only E or I entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(colored(f"Invalid entry: {e}\n", color="red"))
+            print(colored(f"Invalid entry: {e}\n", "red", attrs=['bold']))
 
     return smoothie
 
@@ -98,9 +104,9 @@ def cal(smoothie):
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with low"
-                  " calories (<200kcal)?", color="yellow"))
+                  " calories (<200kcal)?", "yellow"))
     while True:
-        low_cal = input(colored("Enter Y or N\n", color="green")).upper()
+        low_cal = input(colored("Enter Y or N\n", "green")).upper()
         try:
             if low_cal == "Y":
                 time.sleep(2)
@@ -121,7 +127,7 @@ def cal(smoothie):
                                  " only Y or N entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(colored(f"Invalid entry: {e}\n", color="red"))
+            print(colored(f"Invalid entry: {e}\n", "red", attrs=['bold']))
 
     return smoothie
 
@@ -133,9 +139,9 @@ def carbs(smoothie):
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with low"
-                  " carbs (<25g)?", color="yellow"))
+                  " carbs (<25g)?", "yellow"))
     while True:
-        low_carbs = input(colored("Enter Y or N\n", color="green")).upper()
+        low_carbs = input(colored("Enter Y or N\n", "green")).upper()
         try:
             if low_carbs == "Y":
                 time.sleep(2)
@@ -156,7 +162,7 @@ def carbs(smoothie):
                                  " only Y or N entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(colored(f"Invalid entry: {e} \n", color="red"))
+            print(colored(f"Invalid entry: {e} \n", "red", attrs=['bold']))
 
     return smoothie
 
@@ -168,9 +174,9 @@ def fruit_or_veg(smoothie):
     """
     time.sleep(2)
     print(colored("Would you like to make a smoothie with fruit only (F) or"
-                  " fruit and veg (FV)?", color="yellow"))
+                  " fruit and veg (FV)?", "yellow"))
     while True:
-        composition = input(colored("Enter F or FV\n", color="green")).upper()
+        composition = input(colored("Enter F or FV\n", "green")).upper()
         try:
             if composition == "F":
                 time.sleep(2)
@@ -193,7 +199,7 @@ def fruit_or_veg(smoothie):
                                  " only F or FV entries are valid, please"
                                  " try again")
         except ValueError as e:
-            print(colored(f"Invalid entry: {e}\n", color="red"))
+            print(colored(f"Invalid entry: {e}\n", "red", attrs=['bold']))
 
     return smoothie
 
@@ -204,7 +210,7 @@ def result(smoothie):
     for key1, val1 in smoothie.items():
         smoothie_option = key1
         print(colored(f'{key1} smoothie:',
-                      color="yellow", on_color="on_magenta"))
+                      "yellow", "on_magenta"))
         print(f'{"Cal(kcal)"}/serving : {val1["Cal(kcal)"]}')
         print(f'{"Carbs(g)"}/serving : {val1["Carbs(g)"]}')
     time.sleep(2)
@@ -214,8 +220,8 @@ def result(smoothie):
 
 def decision(smoothie_option):
     print(colored("\nWould you like to see the recipe (R) or start again (S)?",
-          color="yellow"))
-    decision = input(colored("Enter R or S\n", color="green")).upper()
+          "yellow"))
+    decision = input(colored("Enter R or S\n", "green")).upper()
     if decision == "S":
         print("Ok no worries, lets go again...\n")
         main()
@@ -226,8 +232,8 @@ def decision(smoothie_option):
               " blend and enjoy!\n")
         for key, values in smoothie_ingrediants.items():
             if key == smoothie_option:
-                print(colored(f'{key} smoothie:', color="yellow",
-                              on_color="on_magenta"))
+                print(colored(f'{key} smoothie:', "yellow",
+                              "on_magenta"))
                 print(*values, sep='\n')
 
 
@@ -240,7 +246,7 @@ def main():
     decision(smoothie_option)
 
 
-print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector",
+print("\U0001F34A" " \U0001F952" " \U0001F34F" " Smoothie Selector ",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
 
 introduction()
