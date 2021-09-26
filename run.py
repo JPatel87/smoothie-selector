@@ -25,7 +25,7 @@ def introduction():
             name = input(colored("Enter name\n",
                                  "green")).capitalize()
             if name.isalpha():
-                time.sleep(1)
+                time.sleep(2)
                 print(f"\nHello {name}, nice to meet you! Hope you are"
                       " having a great day!\n")
                 time.sleep(2)
@@ -283,7 +283,7 @@ def decision():
         choice_two = "S"
         if decision == choice_one:
             time.sleep(2)
-            print("\nWondeful, hope you enjoy the smoothie!\n")
+            print("\nWonderful, hope you enjoy the smoothie!\n")
             time.sleep(2)
             print("Come and visit again soon!\n")
             time.sleep(2)
@@ -313,7 +313,7 @@ def main():
 
 
 # Used unicode consortium names for emojis.
-print("\U0001F34A" " \U0001F952" " \U0001F34F", "SMOOTHIE SELECTOR",
+print("\U0001F34A" " \U0001F952" " \U0001F34F ", "SMOOTHIE SELECTOR",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
 
 
