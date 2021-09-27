@@ -99,6 +99,23 @@ Run file:
 
 ![pep8-runpy](screenshots/pep8-runpy.png)
 
+### Fixed bugs 
+
+In this project, the errors that I mostly came across were the following:
+
+#### Pep8 E501 - line too long:
+* This error was rectified either by using either a backslash or quotation marks to split a long piece of text into two and separating them onto two lines. 
+
+#### Flake8 W291 - trailing white space:
+* This error was rectified by removing any white space, which was initially difficult to notice, but usually occured when rectifying the Pep8 E501 error after part of a long piece of text was moved onto the next line. 
+
+#### Flake8 E117 and E121 - over/under-indented:
+* This indentation error frequently occured whilst resolving the Pep8 E501 error.
+* The new line was not indented inline with where the original text had begun. 
+
+#### Flake8 E302 - expected 2 lines, found 1:
+* This problem occured when creating functions, as I often left only one line between functions. 
+
 ### Unfixed bugs 
 
 
