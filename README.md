@@ -13,26 +13,22 @@ The objectives of the site owner are:
 * To create a program that is useful for target users.
 * To create a program to that is of industry standard.
 
-### User Stories
+### User needs
 
 User would like:
 
 * To be able to open up the program and immediately be able to grasp what its purpose is.
-* The program is clean and consistent in layout.
-* The program is easier to follow through.
-* The program asks relevant questions to help identify a smoothie recipe that meets their needs.
+* A program that is appealing and easy to follow through.
+* A program that asks relevant questions and eventually identifies a smoothie recipe that meets their preferences.
+* The program to display all the necessary details of a smoothie recipe such as the ingrediants, method and nutritional data.
 
 ## Features
 
 ### Existing Features
 
 #### General structure and formatting
-* The colours used throughout this program are; red, green, yellow and white.
-* This is to make the program look appealing and also help distinguish certain pieces of text.
 * The main body of text is in white font and only key pieces of text have been styled in a different colour to highlight their importance. 
-* The text is written in an informal manner and lines of text have been separated with white space, to make the information easier to digest for the user. 
-* Between each key statement there is a time delay before the next statement is printed, which also helps the reader to digest the events that are happening. 
-* The text displayed to the user is systematic, kept to a minimum and is focussed to make it easy for the user to follow through and keep on topic. 
+
 * The program structure is based on the below flow diagram.
 
 Structure of program:
@@ -43,9 +39,14 @@ Structure of program:
 * The title is enclosed between three fruit or veg emoji's either side of it and it is uppercase. 
 * The purpose of this is to make it stand out from the rest of the text, to emphasize its purpose through the emojis and make the program look appealing. 
 * The welcoming statement prompts the user for a name to personalise the interaction between the program and the user.
-* The program purpose is explained in brief so users can easily grasp what the program is about. 
 
 ![title-welcome](screenshots/title-welcome.png)
+
+#### Countdown timer
+* A countdown timer of ten seconds is added after the program isntructions are displayed.
+* This is to allow the user to prepare for the events that follow and also add a fun feature to the application.
+
+![countdown](screenshots/countdown.png)
 
 #### Question and input prompts
 * The question and input prompts have been styled with colour, consistently throughout the program. 
@@ -64,20 +65,9 @@ Structure of program:
 
 #### Result
 * After the user finishes answering the smoothie decision questions, a smoothie is revealed to them, based on their choices.
-* The smoothie recipe name is in red, bold colour, highlighted on a yellow background.
-* This is the only piece of text that is styled this way to signify the end of the smoothie decision questions for the user and highlight the final result. 
-* A summary of the users answer for all smoothie decision questions are stated below the smoothie recipe name as a reminder of their responses, so they do not have to scroll up through the questions to find their responses. 
-* Calorie and Carbohydrate data are displayed as actual values to provide the user with more valuable nutritional data, rather than just stating e.g low calories and low carbohydrates. 
+* The smoothie recipe name is in red, bold colour and highlighted on a yellow background. This is to emphasize that the end goal of the program has been reached. 
 
 ![smoothie-result](screenshots/smoothie-result.png)
-
-#### Recipe
-* After the smoothie name and summary data is revealed to the user, the recipe details are displayed. 
-* All the recipe details that are conventionally present in a recipe are displayed to the user; the recipe serving size, ingrediants and method. 
-* The ingrediants are displayed in a vertical list following the structure of a typical ingrediants list that users would be familiar seeing. 
-* The serving size and method are both in uppercase to distinguish them from the rest of the text. 
-
-![smoothie-recipe](screenshots/smoothie-recipe.png)
 
 ### Features left to implement
 
@@ -87,9 +77,45 @@ I would also like to add other types of smoothies for example, indulgent smoothi
 
 ## Testing
 
+### User needs
+
+Here I will identify a user need and run through how this is being met by the program.
+
+1. User need: To be able to open up the program and immediately be able to grasp what its purpose is.
+* When the application is opened up the program purpose is explained in brief so users can easily grasp what the program is about.
+
+![purpose](screenshots/purpose.png)
+
+2. User need: The program is appealing and easy to follow.
+* The colours used throughout this program are; red, green, yellow and white. This is to make the program look appealing and also help distinguish certain pieces of text.
+* The questions and inputs are styled in one way and the rest of the text in another, this is so that users can develop a familiarity with what type of text is being displayed and whether they need to provide an input. 
+* Between each key statement there is a time delay before the next statement is printed and there is white space between statements. This helps the user to digest the events that are happening. 
+* The text is written in an informal manner to make it easier to follow through.  
+* The text displayed to the user is systematic, kept to a minimum and is focussed to make it easy for the user to follow through and keep on topic.
+ 
+![layout](screenshots/layout.png)
+
+4. User need: The program asks relevant questions and eventually identifies a smoothie recipe that meets user preferences.
+* I have conducted internet research to have a look at the types of smoothie recipes that are available and how they are marketed and from this I have chosen specific questions that I believe maybe relevant for a user.
+* There are four questions that are asked in succession to help whittle down the smoothie selection to one smoothie for the user. This has been checked and all possible answer choices lead to one smoothie recipe. 
+
+![questions](screenshots/questions.png)
+
+ 5. User need: The program to display all the necessary details of a smoothie recipe such as the ingrediants, method and nutritional data. 
+* All the recipe details that are conventionally present in a recipe are displayed to the user; the recipe serving size, ingrediants, method and key nutritional data. 
+* A summary of the users answer for all smoothie decision questions are stated below the smoothie recipe name as a reminder of their responses, so they do not have to scroll up through the questions to find their responses. 
+
+![recipe](screenshots/recipe.png)
+
+### Challenges
+
+
+
+
+
 ### Validator testing
 
-Pep8 online validator was used to check the code in the run.py file and the recipes.py file, both passed the validator check. 
+Pep8 online validator was used to check the code in the run file and the recipes file, both passed the validator check. 
 
 Recipe file:
 
@@ -107,7 +133,8 @@ In this project, the errors that I mostly came across were the following:
 * This error was rectified either by using either a backslash or quotation marks to split a long piece of text into two and separating them onto two lines. 
 
 #### Flake8 W291 - trailing white space:
-* This error was rectified by removing any white space, which was initially difficult to notice, but usually occured when rectifying the Pep8 E501 error after part of a long piece of text was moved onto the next line. 
+* This error was rectified by removing any white space, which was initially difficult to notice, but usually occured when rectifying the Pep8 E501 error.
+* After part of a long piece of text was moved onto the next line, this left an a trailing white space at the end of the original line. 
 
 #### Flake8 E117 and E121 - over/under-indented:
 * This indentation error frequently occured whilst resolving the Pep8 E501 error.
@@ -117,7 +144,7 @@ In this project, the errors that I mostly came across were the following:
 * This problem occured when creating functions, as I often left only one line between functions. 
 
 ### Unfixed bugs 
-
+* There are no unfixed bugs in this project that I am aware of.
 
 # Deployment
 
