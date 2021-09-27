@@ -128,7 +128,7 @@ def validate_data(input, choice_one, choice_two):
 def cal(smoothie):
     """
     User is asked to decide whether they are interested \
-    in a low calories smoothie. While loop implemented to \
+    in a low calorie smoothie. While loop implemented to \
     check user input. Validate data function run to handle error, \
     if input is not valid.
     """

@@ -1,5 +1,7 @@
 # Smoothie Selector
 
+![responsive-layout](screenshots/responsive-layout.png)
+
 ## Table of contents
 1. [Introduction](#introduction)
 2. [UX](#ux)
@@ -22,8 +24,6 @@
 ## Introduction 
 
 Smoothie Selector is an interactive command line program which aims to help users decide on which smoothie to make. It is targeting users who are interested in making smoothies based on their nutritional value. The program iterates through a series of questions in order to narrow the smoothie choice selection down for the user based on their responses. 
-
-![responsive-layout](screenshots/responsive-layout.png)
 
 ## UX
 
@@ -129,12 +129,35 @@ Here I will identify a user need and run through how this is being met by the pr
 
 ### Challenges
 
-1. Code flow
+1. Code structure
 
-Initially my code 
+Initially, my code was structured such that each function was being called from within the previous function, so that they all linked together. However, after consultation with my mentor and also using the [Code Institute](https://codeinstitute.net/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=a%26c_SEA_UK_BR_Brand_Code_Institute&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=492338271836&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI9OSlzraT8wIVgbTtCh0lSQINEAAYASAAEgJHFvD_BwE) Love Sandwiches walk-through project as a guideline, I realised that this was not the best practice and it would be better to have one function (referred to as the main function in my code) from which all others could be called. For this reason, I re-worked all of my code. 
 
+2. Print statements of function output
 
+Initially, after each function I was printing out the outcome of the function to the console. This, however, made the console appear cluttered and did not seem like it would create the best UX. For this reason, I re-worked my code at the same time as I created the main function to call all my functions from, so that each function was returning the outcome which was then inherited by the next function. 
 
+3. Smoothie variable
+
+After re-working my code so functions were being called from one function (main function), the next challenge I faced was how I was able to iterate through the smoothie dictionary so that the items of the dictionary could be be filtered down after each question. I initially assigned the smoothie variable to equal the smoothies dictionary and used the pop method after each function for loop to filter out items.However, what this meant was that at the end of the code if a user wanted to re-start the program again (if they were not happy with the smoothie suggestion), if would only recognize one item as being a part of the dictionary. For this reason, I decided to assign the smoothie variable to a copy of the smoothies dictionary using the copy method so that if the program had to be re-run the original dictionary would be copied in full. 
+
+![smoothies-copy](screenshots/smoothies-copy.png)
+
+4. Error handling code
+
+Initially, my code repeated the same error handling code block with slight wording changes after each question function. However, I felt that this could be refractored so that one error handling block could be called from within multiple functions, which would reduce repetition. After taking inspiration from the [Code Institute](https://codeinstitute.net/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=a%26c_SEA_UK_BR_Brand_Code_Institute&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=492338271836&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI9OSlzraT8wIVgbTtCh0lSQINEAAYASAAEgJHFvD_BwE) Love Sandwiches project, I reworked my code and created a validate data function which called for three parameters; the input value and the two choice answers. The validate data function could then be called from multiple functions using different input value arguments. Thus allowing the error message to appear slightly differently when called by different functions. 
+
+I used python tutor extensively throughout this project to first test out any new code I wish to implement in my project, see below an example of how I used python tutor to test the validate data function. 
+
+![python-tutor](screenshots/python-tutor.png)
+
+![validate-data](screenshots/validate-data.png)
+
+5. Print ingrediants in a vertical list
+
+I wanted to be able to print the ingrediants of a recipe in vertical list, as is the convention, however as the ingrediants in my code were in a nested list within a dictionary, they were printing out in a row. I found from the [codegrepper](https://www.codegrepper.com/code-examples/python/how+to+print+list+vertically+in+python) website a coding solution to be able to print out lists in a vertical fashion, so that each ingrediant could be printed on a new line. I applied this logic to my nested lists code. 
+
+![ingrediants-vertical](screenshots/ingrediants-vertical.png)
 
 
 ### Validator testing
@@ -221,9 +244,9 @@ https://smoothie-selector.herokuapp.com/
 23) The Github link for this project is:
 https://github.com/JPatel87/smoothie-selector
 
-# Credits 
+## Credits 
 
-## Content
+### Content
 
 * Code institute for providing a python essentials template to work from.
 * The following recipe websites which were used to obtain all my recipes; [bbc good food](https://www.bbcgoodfood.com/recipes), [downshifology](https://downshiftology.com/), [jar of lemons](https://www.jaroflemons.com/), [clean eating magazine](https://www.cleaneatingmag.com/) and [vitamix](https://www.vitamix.com/us/en_us/).
@@ -234,6 +257,6 @@ https://github.com/JPatel87/smoothie-selector
 * Instructions on how to add time delays to code were taken from the website [Real Python](https://realpython.com/python-sleep/).
 * For general troubleshooting advice, the following websites were used; [Code Institute](https://codeinstitute.net/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=a%26c_SEA_UK_BR_Brand_Code_Institute&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=492338271836&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI9OSlzraT8wIVgbTtCh0lSQINEAAYASAAEgJHFvD_BwE) Python Essentials module and love sandwiches walk-through project,  [Stack Overflow](https://stackoverflow.com/) and [W3 Schools](https://www.w3schools.com/).
 
-## Acknowledgements
+### Acknowledgements
 
 This project has been an eye-opening experience for me to develop a command line program that looks appealing and is able to manipulate data to deliver results. My thanks goes to Code Institute tutor support who have been fantastic at answering all my queries and my tutor, Seun Owonikoko, for her insight and guidance.
