@@ -80,6 +80,15 @@ pip3 freeze > requirements.txt
 
 21) The app should appear in a new tab on the web browser
 
+22) The link to my Heroku app is:
+https://smoothie-selector.herokuapp.com/
+
+23) The Github link for this project is:
+https://github.com/JPatel87/smoothie-selector
+
+
+
+
 # Credits 
 
 ## Content
