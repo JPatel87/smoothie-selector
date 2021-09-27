@@ -243,8 +243,10 @@ def result(smoothie):
         smoothie_option = key1
         print(colored(f"{key1} smoothie:",
                       "yellow", "on_magenta"))
+        print(f'{"Type"} : {val1["Type"]}')
         print(f'{"Cal(kcal)"}/serving : {val1["Cal(kcal)"]}')
         print(f'{"Carbs(g)"}/serving : {val1["Carbs(g)"]}')
+        print(f'{"Ingred"} : {val1["Ingred"]}')
 
     return smoothie_option
 
@@ -263,7 +265,7 @@ def recipe(smoothie_option):
     print("\nMETHOD:")
     print("1) Wash all fruits and/or vegetables.")
     print("2) Cut any large ingrediants into small cubes.")
-    print("3) Blitz everything together in a blender and enjoy!\n")
+    print("3) Whizz everything together in a blender and enjoy!\n")
     time.sleep(4)
 
 
