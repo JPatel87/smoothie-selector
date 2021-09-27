@@ -1,32 +1,53 @@
 # Smoothie Selector
 
+## Table of contents
+1. [Introduction](#introduction)
+2. [UX](#ux)
+    * [Site owner goals](#site-owner-goals)
+    * [User needs](#user-needs)
+3. [Features](#features)
+    * [Existing features](#existing-features)
+    * [Features left to implement](#features-left-to-implement)
+4. [Testing](#testing)
+    * [User needs](#user-needs)
+    * [Challenges](#challenges)
+    * [Validator testing](#validator-testing)
+    * [Unfixed bugs](#unfixed-bugs)
+5. [Deployment](#deployment)
+6. [Credits](#credits)
+    * [Content](#content)
+    * [Acknowledgements](#acknowledgements)
+
+
+## Introduction 
+
 Smoothie Selector is an interactive command line program which aims to help users decide on which smoothie to make. It is targeting users who are interested in making smoothies based on their nutritional value. The program iterates through a series of questions in order to narrow the smoothie choice selection down for the user based on their responses. 
 
 ![responsive-layout](screenshots/responsive-layout.png)
 
 ## UX
 
-### Site Owner Goals
+### Site owner goals
 
 The objectives of the site owner are: 
-* To create a user friendly, attractive, command line program that is easier to follow.
-* To create a program that is useful for target users.
-* To create a program to that is of industry standard.
+1. To create a user friendly, attractive, command line program that is easier to follow.
+2. To create a program that is useful for target users.
+3. To create a program to that is of industry standard.
 
 ### User needs
 
 User would like:
 
-* To be able to open up the program and immediately be able to grasp what its purpose is.
-* A program that is appealing and easy to follow through.
-* A program that asks relevant questions and eventually identifies a smoothie recipe that meets their preferences.
-* The program to display all the necessary details of a smoothie recipe such as the ingrediants, method and nutritional data.
+1. To be able to open up the program and immediately be able to grasp what its purpose is.
+2. A program that is appealing and easy to follow through.
+3. A program that asks relevant questions and eventually identifies a smoothie recipe that meets their preferences.
+4. The program to display all the necessary details of a smoothie recipe such as the ingrediants, method and nutritional data.
 
 ## Features
 
-### Existing Features
+### Existing features
 
-#### General structure and formatting
+1. Structure and formatting
 * The main body of text is in white font and only key pieces of text have been styled in a different colour to highlight their importance. 
 
 * The program structure is based on the below flow diagram.
@@ -35,20 +56,20 @@ Structure of program:
 
 ![flowchart](screenshots/flowchart.png)
 
-#### Title and Welcome
+2. Title and welcome
 * The title is enclosed between three fruit or veg emoji's either side of it and it is uppercase. 
 * The purpose of this is to make it stand out from the rest of the text, to emphasize its purpose through the emojis and make the program look appealing. 
 * The welcoming statement prompts the user for a name to personalise the interaction between the program and the user.
 
 ![title-welcome](screenshots/title-welcome.png)
 
-#### Countdown timer
-* A countdown timer of ten seconds is added after the program isntructions are displayed.
+2. Countdown timer
+* A countdown timer of ten seconds is added after the program instructions are displayed.
 * This is to allow the user to prepare for the events that follow and also add a fun feature to the application.
 
 ![countdown](screenshots/countdown.png)
 
-#### Question and input prompts
+3. Question and input prompts
 * The question and input prompts have been styled with colour, consistently throughout the program. 
 * The questions are in yellow. 
 * The input prompts are in green.
@@ -56,14 +77,14 @@ Structure of program:
 
 ![questions-prompts](screenshots/questions-prompts.png)
 
-#### Invalid entries
+4. Invalid entries
 *  Any invalid input entries are displayed in red and bold font to highlight the error to the user.
 * The error message displays what the error is as well as what entry the user should be making so that users can easily identify their error and know how to rectify them.
 * The input prompt re-appears so that users can re-enter a valid entry. 
 
 ![invalid-entry](screenshots/invalid-entry.png)
 
-#### Result
+5. Result
 * After the user finishes answering the smoothie decision questions, a smoothie is revealed to them, based on their choices.
 * The smoothie recipe name is in red, bold colour and highlighted on a yellow background. This is to emphasize that the end goal of the program has been reached. 
 
@@ -81,33 +102,36 @@ I would also like to add other types of smoothies for example, indulgent smoothi
 
 Here I will identify a user need and run through how this is being met by the program.
 
-1. User need: To be able to open up the program and immediately be able to grasp what its purpose is.
+1. To be able to open up the program and immediately be able to grasp what its purpose is.
 * When the application is opened up the program purpose is explained in brief so users can easily grasp what the program is about.
 
 ![purpose](screenshots/purpose.png)
 
-2. User need: The program is appealing and easy to follow.
+2. The program is appealing and easy to follow.
 * The colours used throughout this program are; red, green, yellow and white. This is to make the program look appealing and also help distinguish certain pieces of text.
-* The questions and inputs are styled in one way and the rest of the text in another, this is so that users can develop a familiarity with what type of text is being displayed and whether they need to provide an input. 
-* Between each key statement there is a time delay before the next statement is printed and there is white space between statements. This helps the user to digest the events that are happening. 
-* The text is written in an informal manner to make it easier to follow through.  
-* The text displayed to the user is systematic, kept to a minimum and is focussed to make it easy for the user to follow through and keep on topic.
+* The questions and inputs are styled in colour and the rest of the text in white (with the exception of the recipe name), this is so that users can develop a familiarity with what type of text is being displayed and whether they need to provide an input. 
+* Between each key statement there is a time delay before the next statement is printed and there is space between statements. This helps the user to digest the events that are happening. 
+* The text is informal, focussed and is designed to flow systematically to make it easy for the user to follow through.
  
 ![layout](screenshots/layout.png)
 
-4. User need: The program asks relevant questions and eventually identifies a smoothie recipe that meets user preferences.
+3. The program asks relevant questions and eventually identifies a smoothie recipe that meets user preferences.
 * I have conducted internet research to have a look at the types of smoothie recipes that are available and how they are marketed and from this I have chosen specific questions that I believe maybe relevant for a user.
-* There are four questions that are asked in succession to help whittle down the smoothie selection to one smoothie for the user. This has been checked and all possible answer choices lead to one smoothie recipe. 
+* There are four questions that are asked in succession to help whittle down the smoothie selection to one smoothie for the user. This has been checked and all possible input choices lead to one smoothie recipe. 
 
 ![questions](screenshots/questions.png)
 
- 5. User need: The program to display all the necessary details of a smoothie recipe such as the ingrediants, method and nutritional data. 
+4. The program to display all the necessary details of a smoothie recipe such as the ingrediants, method and nutritional data. 
 * All the recipe details that are conventionally present in a recipe are displayed to the user; the recipe serving size, ingrediants, method and key nutritional data. 
-* A summary of the users answer for all smoothie decision questions are stated below the smoothie recipe name as a reminder of their responses, so they do not have to scroll up through the questions to find their responses. 
+* A summary of the user input entries for all smoothie decision questions are stated below the smoothie recipe name as a reminder of their responses, so they do not have to scroll up through the questions to find their responses. 
 
 ![recipe](screenshots/recipe.png)
 
 ### Challenges
+
+1. Code flow
+
+Initially my code 
 
 
 
@@ -115,7 +139,23 @@ Here I will identify a user need and run through how this is being met by the pr
 
 ### Validator testing
 
-Pep8 online validator was used to check the code in the run file and the recipes file, both passed the validator check. 
+In this project, the errors that I mostly came across were the following:
+
+1. Pep8 E501 - line too long:
+* This error was rectified either by using either a backslash or quotation marks to split a long piece of text into two and separating them onto two lines. 
+
+2. Flake8 W291 - trailing white space:
+* This error was rectified by removing any white space, which was initially difficult to notice, but usually occured when rectifying the Pep8 E501 error.
+* After part of a long piece of text was moved onto the next line, this left an a trailing white space at the end of the original line. 
+
+3. Flake8 E117 and E121 - over/under-indented:
+* This indentation error frequently occured whilst resolving the Pep8 E501 error.
+* The new line was not indented inline with where the original text had begun. 
+
+4. Flake8 E302 - expected 2 lines, found 1:
+* This problem occured when creating functions, as I often left only one line between functions. 
+
+After rectifying all errors Pep8 online validator was used to check the code in the run file and the recipes file, both passed the validator check. 
 
 Recipe file:
 
@@ -125,28 +165,10 @@ Run file:
 
 ![pep8-runpy](screenshots/pep8-runpy.png)
 
-### Fixed bugs 
-
-In this project, the errors that I mostly came across were the following:
-
-#### Pep8 E501 - line too long:
-* This error was rectified either by using either a backslash or quotation marks to split a long piece of text into two and separating them onto two lines. 
-
-#### Flake8 W291 - trailing white space:
-* This error was rectified by removing any white space, which was initially difficult to notice, but usually occured when rectifying the Pep8 E501 error.
-* After part of a long piece of text was moved onto the next line, this left an a trailing white space at the end of the original line. 
-
-#### Flake8 E117 and E121 - over/under-indented:
-* This indentation error frequently occured whilst resolving the Pep8 E501 error.
-* The new line was not indented inline with where the original text had begun. 
-
-#### Flake8 E302 - expected 2 lines, found 1:
-* This problem occured when creating functions, as I often left only one line between functions. 
-
 ### Unfixed bugs 
 * There are no unfixed bugs in this project that I am aware of.
 
-# Deployment
+## Deployment
 
 This program was deployed to Heroku, following the below steps:
 
@@ -198,9 +220,6 @@ https://smoothie-selector.herokuapp.com/
 
 23) The Github link for this project is:
 https://github.com/JPatel87/smoothie-selector
-
-
-
 
 # Credits 
 
