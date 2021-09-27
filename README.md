@@ -4,7 +4,6 @@ Smoothie Selector is an interactive command line program which aims to help user
 
 ![responsive-layout](screenshots/responsive-layout.png)
 
-
 # UX
 
 ## Site Owner Goals
@@ -80,6 +79,12 @@ Structure of program:
 * The serving size and method are both in uppercase to distinguish them from the rest of the text. 
 
 ![smoothie-recipe](screenshots/smoothie-recipe.png)
+
+## Features left to implement
+
+If I had further time on this project I would like to add additional questions about nutritional data such as protein levels and perhaps what fruit items the user would like to use to filter down their options further. 
+
+I would also like to add other types of smoothies for example, indulgent smoothies or quick smoothies.
 
 # Deployment
 
