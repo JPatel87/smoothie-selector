@@ -249,7 +249,7 @@ https://github.com/JPatel87/smoothie-selector
 ### Content
 
 * Code institute for providing a python essentials template to work from.
-* The following recipe websites which were used to obtain all my recipes; [bbc good food](https://www.bbcgoodfood.com/recipes), [downshifology](https://downshiftology.com/), [jar of lemons](https://www.jaroflemons.com/), [clean eating magazine](https://www.cleaneatingmag.com/) and [vitamix](https://www.vitamix.com/us/en_us/).
+* The following recipe websites which were used to obtain all my recipes; [bbc good food](https://www.bbcgoodfood.com/recipes), [downshifology](https://downshiftology.com/), [jar of lemons](https://www.jaroflemons.com/), [clean eating magazine](https://www.cleaneatingmag.com/), [step away from the carbs](https://stepawayfromthecarbs.com/), [eating well](https://www.eatingwell.com/), [primavera kitchen](https://www.primaverakitchen.com/), [deliciously sprinked](https://deliciouslysprinkled.com/), [I love vegan](https://ilovevegan.com/) and [vitamix](https://www.vitamix.com/us/en_us/).
 * To create a flowchart for my project [diagrams.net](https://app.diagrams.net/) was used. 
 * The external python library [termcolor](https://pypi.org/project/termcolor/) was used to import colour to text.
 * The emojis used in this program were codes taken from the [Unicode Consortium](http://www.unicode.org/emoji/charts/full-emoji-list.html).
