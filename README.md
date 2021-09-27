@@ -22,57 +22,60 @@ User would like:
 
 # Features
 
+
 ## Existing Features
 
-### General 
+### General structure and formatting
 * The colours used throughout this program are; red, green, yellow and white.
 * This is to make the program look appealing and also help distinguish certain pieces of text.
 * The main body of text is in white font and only key pieces of text have been styled in a different colour to highlight their importance. 
-* The text is written in an informal manner, lines of text have been separated with white space, to make the information easier to digest for the user. 
-* Between each key statement there is a time gap before the next statement is printed, which also helps the reader to digest the events that are happening. 
+* The text is written in an informal manner and lines of text have been separated with white space, to make the information easier to digest for the user. 
+* Between each key statement there is a time delay before the next statement is printed, which also helps the reader to digest the events that are happening. 
 * The text displayed to the user is systematic, kept to a minimum and is focussed to make it easy for the user to follow through and keep on topic. 
-* The structure of the program is as follows; introduction to program, questions, results, recipe details and end game options. 
+* The program structure is based on the below flow diagram.
 
-
+Structure of program:
+![flowchart](screenshots/flowchart.png)
 
 ### Title and Welcome
-* The title is enclosed between three fruit emoji's either side of it and it is uppercase. 
+* The title is enclosed between three fruit or veg emoji's either side of it and it is uppercase. 
 * The purpose of this is to make it stand out from the rest of the text, to emphasize its purpose through the emojis and make the program look appealing. 
 * The welcoming statement prompts the user for a name to personalise the interaction between the program and the user.
 * The program purpose is explained in brief so users can easily grasp what the program is about. 
 
 ![title-welcome](screenshots/title-welcome.png)
 
-### Questions and Inputs
+### Question and input prompts
 * The question and input prompts have been styled with colour, consistently throughout the program. 
-* The questions are in yellow 
-* The input prompts are in green
+* The questions are in yellow. 
+* The input prompts are in green.
 * This is to help users to distinguish the question and input prompts from the rest of the text.
 
 ![questions-prompts](screenshots/questions-prompts.png)
 
 ### Invalid entries
-*  Any invalid input errors are displayed in red, bold font to highlight the error to the users attention.
+*  Any invalid input entries are displayed in red and bold font to highlight the error to the user.
 * The error message displays what the error is as well as what entry the user should be making so that users can easily identify their error and know how to rectify them.
 * The input prompt re-appears so that users can re-enter a valid entry. 
 
 ![invalid-entry](screenshots/invalid-entry.png)
 
 ### Result
+* After the user finishes answering the smoothie decision questions, a smoothie is revealed to them, based on their choices.
 * The smoothie recipe name is in yellow colour, highlighted on a magenta background.
 * This is the only piece of text that is styled this way to signify the end of the smoothie decision questions for the user and highlight the final result. 
 * A summary of the users answer for all smoothie decision questions are stated below the smoothie recipe name as a reminder of their responses, so they do not have to scroll up through the questions to find their responses. 
 * Calorie and Carbohydrate data are displayed as actual values to provide the user with more valuable nutritional data, rather than just stating e.g low calories and low carbohydrates. 
 
-[NEED TO TAKE SCREENSHOT OF RECIPE AND SUMMARY INFORMATION]
+![smoothie-summary](screenshots/smoothie-summary.png)
 
 ### Recipe
-* All the recipe details that the user expects to see are detailed below the recipe name and summary information.
-* This includes; recipe serving size, ingrediants and method. 
+* After the smoothie name and summary data is revealed to the user, the recipe details are displayed. 
+* All the recipe details that are conventionally present in a recipe are displayed to the user; the recipe serving size, ingrediants and method. 
 * The ingrediants are displayed in a vertical list following the structure of a typical ingrediants list that users would be familiar seeing. 
 * The serving size and method are both in uppercase to distinguish them from the rest of the text. 
 
-[NEED TO TAKE SCREENSHOT OF RECIPE DETAILS]
+![smoothie-recipe](screenshots/smoothie-recipe.png)
 
 
 
