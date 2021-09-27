@@ -62,12 +62,12 @@ Structure of program:
 
 ### Result
 * After the user finishes answering the smoothie decision questions, a smoothie is revealed to them, based on their choices.
-* The smoothie recipe name is in yellow colour, highlighted on a magenta background.
+* The smoothie recipe name is in red, bold colour, highlighted on a yellow background.
 * This is the only piece of text that is styled this way to signify the end of the smoothie decision questions for the user and highlight the final result. 
 * A summary of the users answer for all smoothie decision questions are stated below the smoothie recipe name as a reminder of their responses, so they do not have to scroll up through the questions to find their responses. 
 * Calorie and Carbohydrate data are displayed as actual values to provide the user with more valuable nutritional data, rather than just stating e.g low calories and low carbohydrates. 
 
-![smoothie-summary](screenshots/smoothie-summary.png)
+![smoothie-result](screenshots/smoothie-result.png)
 
 ### Recipe
 * After the smoothie name and summary data is revealed to the user, the recipe details are displayed. 
@@ -76,12 +76,6 @@ Structure of program:
 * The serving size and method are both in uppercase to distinguish them from the rest of the text. 
 
 ![smoothie-recipe](screenshots/smoothie-recipe.png)
-
-
-
-
-
-
 
 
 # Deployment
