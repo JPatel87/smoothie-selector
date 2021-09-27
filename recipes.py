@@ -1,4 +1,4 @@
-# Smoothie nutrition and composition data
+# Smoothie summary details
 smoothies = {
     "Banana, Mango and Spinach": {"Type": "E", "Cal(kcal)": 492,
                                   "Carbs(g)": 47, "Ingred": "FV"},

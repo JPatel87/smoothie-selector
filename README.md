@@ -4,16 +4,16 @@ Smoothie Selector is an interactive command line program which aims to help user
 
 ![responsive-layout](screenshots/responsive-layout.png)
 
-# UX
+## UX
 
-## Site Owner Goals
+### Site Owner Goals
 
 The objectives of the site owner are: 
 * To create a user friendly, attractive, command line program that is easier to follow.
 * To create a program that is useful for target users.
 * To create a program to that is of industry standard.
 
-## User Stories
+### User Stories
 
 User would like:
 
@@ -22,12 +22,11 @@ User would like:
 * The program is easier to follow through.
 * The program asks relevant questions to help identify a smoothie recipe that meets their needs.
 
-# Features
+## Features
 
+### Existing Features
 
-## Existing Features
-
-### General structure and formatting
+#### General structure and formatting
 * The colours used throughout this program are; red, green, yellow and white.
 * This is to make the program look appealing and also help distinguish certain pieces of text.
 * The main body of text is in white font and only key pieces of text have been styled in a different colour to highlight their importance. 
@@ -40,7 +39,7 @@ Structure of program:
 
 ![flowchart](screenshots/flowchart.png)
 
-### Title and Welcome
+#### Title and Welcome
 * The title is enclosed between three fruit or veg emoji's either side of it and it is uppercase. 
 * The purpose of this is to make it stand out from the rest of the text, to emphasize its purpose through the emojis and make the program look appealing. 
 * The welcoming statement prompts the user for a name to personalise the interaction between the program and the user.
@@ -48,7 +47,7 @@ Structure of program:
 
 ![title-welcome](screenshots/title-welcome.png)
 
-### Question and input prompts
+#### Question and input prompts
 * The question and input prompts have been styled with colour, consistently throughout the program. 
 * The questions are in yellow. 
 * The input prompts are in green.
@@ -56,14 +55,14 @@ Structure of program:
 
 ![questions-prompts](screenshots/questions-prompts.png)
 
-### Invalid entries
+#### Invalid entries
 *  Any invalid input entries are displayed in red and bold font to highlight the error to the user.
 * The error message displays what the error is as well as what entry the user should be making so that users can easily identify their error and know how to rectify them.
 * The input prompt re-appears so that users can re-enter a valid entry. 
 
 ![invalid-entry](screenshots/invalid-entry.png)
 
-### Result
+#### Result
 * After the user finishes answering the smoothie decision questions, a smoothie is revealed to them, based on their choices.
 * The smoothie recipe name is in red, bold colour, highlighted on a yellow background.
 * This is the only piece of text that is styled this way to signify the end of the smoothie decision questions for the user and highlight the final result. 
@@ -72,7 +71,7 @@ Structure of program:
 
 ![smoothie-result](screenshots/smoothie-result.png)
 
-### Recipe
+#### Recipe
 * After the smoothie name and summary data is revealed to the user, the recipe details are displayed. 
 * All the recipe details that are conventionally present in a recipe are displayed to the user; the recipe serving size, ingrediants and method. 
 * The ingrediants are displayed in a vertical list following the structure of a typical ingrediants list that users would be familiar seeing. 
@@ -80,11 +79,28 @@ Structure of program:
 
 ![smoothie-recipe](screenshots/smoothie-recipe.png)
 
-## Features left to implement
+### Features left to implement
 
 If I had further time on this project I would like to add additional questions about nutritional data such as protein levels and perhaps what fruit items the user would like to use to filter down their options further. 
 
 I would also like to add other types of smoothies for example, indulgent smoothies or quick smoothies.
+
+## Testing
+
+### Validator testing
+
+Pep8 online validator was used to check the code in the run.py file and the recipes.py file, both passed the validator check. 
+
+Recipe file:
+
+![pep8-recipe](screenshots/pep8-recipe.png)
+
+Run file:
+
+![pep8-runpy](screenshots/pep8-runpy.png)
+
+### Unfixed bugs 
+
 
 # Deployment
 
