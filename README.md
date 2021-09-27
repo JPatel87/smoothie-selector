@@ -2,6 +2,9 @@
 
 Smoothie Selector is an interactive command line program which aims to help users decide on which smoothie to make. It is targeting users who are interested in making smoothies based on their nutritional value. The program iterates through a series of questions in order to narrow the smoothie choice selection down for the user based on their responses. 
 
+![responsive-layout](screenshots/responsive-layout.png)
+
+
 # UX
 
 ## Site Owner Goals
@@ -35,6 +38,7 @@ User would like:
 * The program structure is based on the below flow diagram.
 
 Structure of program:
+
 ![flowchart](screenshots/flowchart.png)
 
 ### Title and Welcome
@@ -76,7 +80,6 @@ Structure of program:
 * The serving size and method are both in uppercase to distinguish them from the rest of the text. 
 
 ![smoothie-recipe](screenshots/smoothie-recipe.png)
-
 
 # Deployment
 
