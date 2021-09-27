@@ -242,7 +242,7 @@ def result(smoothie):
     for key1, val1 in smoothie.items():
         smoothie_option = key1
         print(colored(f"{key1} smoothie:",
-                      "yellow", "on_green"))
+                      "green", "on_yellow"))
         print(f'{"Type"} : {val1["Type"]}')
         print(f'{"Cal(kcal)"}/serving : {val1["Cal(kcal)"]}')
         print(f'{"Carbs(g)"}/serving : {val1["Carbs(g)"]}')
