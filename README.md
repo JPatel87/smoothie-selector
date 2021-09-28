@@ -52,8 +52,6 @@ User would like:
 
 * The program code structure was developed based on the following process flow diagram, which was drafted before any of the code was written. 
 
-Structure of program:
-
 ![flowchart](screenshots/flowchart.png)
 
 2. Title and welcome
@@ -157,7 +155,7 @@ Project - implemented code:
 
 5. Print ingrediants in a vertical list
 
-* I wanted to be able to print the ingrediants of a recipe in vertical list, as per the convention. As the ingrediants in my code were in a nested list within a dictionary, they were naturally printing out in a row. I found from the [codegrepper](https://www.codegrepper.com/code-examples/python/how+to+print+list+vertically+in+python) website a coding solution to print out lists in a vertical fashion, so that each item in the list could be printed on a new line. I applied this logic to my nested list code. 
+* I wanted to be able to print the ingrediants of a recipe in vertical list, as per the convention. The ingrediants in my code, however, were in a nested list within a dictionary, hence they were naturally printing out in a row. I found from the [codegrepper](https://www.codegrepper.com/code-examples/python/how+to+print+list+vertically+in+python) website a coding solution to print out lists in a vertical fashion, so that each item in the list could be printed on a new line. I applied this logic to my nested list code. 
 
 ![ingrediants-vertical](screenshots/ingrediants-vertical.png)
 
