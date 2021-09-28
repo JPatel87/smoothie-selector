@@ -23,7 +23,7 @@
 
 ## Introduction 
 
-Smoothie Selector is an interactive command line program aiming to help users decide on a smoothie to make. It targets users who are interested in making smoothies and who would like help in deciding which smoothie to make based on its nutritional value and composition. The program iterates through a series of questions and based on the user response, a smoothie suggestion is revealed to them at the end. 
+Smoothie Selector is an interactive command line program aiming to help users who are interested in making a smoothie, decide on a smoothie to make. The program iterates through a set of questions based on nutritional value and composition and from the user response, a smoothie suggestion is revealed to them at the end of the program. 
 
 ## UX
 
@@ -32,7 +32,7 @@ Smoothie Selector is an interactive command line program aiming to help users de
 The objectives of the site owner are: 
 1. To create an attractive, command line program, adhering to good UX design principles.
 2. To create a program that is useful for target users.
-3. To create a program to that is of industry standard.
+3. To create a program that is of industry standard.
 
 ### User needs
 
@@ -57,43 +57,40 @@ Structure of program:
 ![flowchart](screenshots/flowchart.png)
 
 2. Title and welcome
-* The title is enclosed between three fruit and veg emoji's at either side and it is styled in uppercase. 
-* The purpose of this is to make it stand out from the rest of the text, to emphasize its purpose through the emojis and make the program look appealing. 
+* The title is enclosed between three emoji's at either side (two fruit and one vegetable) and it is styled in uppercase. The purpose of this is to make it stand out from the rest of the text, to emphasize its purpose through the emojis and make the program look appealing. 
 * The welcoming statement prompts the user for a name to personalise the interaction between the program and the user.
 
 ![title-welcome](screenshots/title-welcome.png)
 
 2. Countdown timer and time sleep code
-* A countdown timer of ten seconds has been added after the program instructions are displayed, by using the internal python time module.
-* This is to allow the user to prepare for the events that follow and also add a fun feature to the program.
-* The time.sleep() code has been used throughout this program to add time delays before and or after a print statement is displayed, for good user experience.  
+* A countdown timer of ten seconds has been added after the program instructions are displayed, by using the internal python time module. This is to allow the user to prepare for the events that follow and also add a fun feature to the program.
+* The time.sleep() code has been used throughout this program to add time delays before and or after a print statement is displayed, for good UX.  
 
 ![countdown](screenshots/countdown.png)
 
 3. Question and input prompts
-* The question and input prompts have been styled with colour, consistently throughout the program. 
+* The question and input prompts have been styled with colour, consistently throughout the program. This is to help users to distinguish the question and input prompts from the rest of the text.
 * The questions are in yellow. 
 * The input prompts are in green.
-* This is to help users to distinguish the question and input prompts from the rest of the text.
 
 ![questions-prompts](screenshots/questions-prompts.png)
 
 4. Invalid entries
 *  Any invalid input entries are displayed in red and bold font to highlight the error to the user.
-* The error message displays what the error is as well as what entry the user should be making so that users can easily identify their error and know how to rectify them.
-* The input prompt re-appears so that users can re-enter a valid entry. 
+* The error message displays what the invalid entry is as well as what a valid entry is so that users can easily identify their error and are aware of how to rectify them.
+* The input prompt re-appears after an invalid entry so that users can re-enter a valid entry. 
 
 ![invalid-entry](screenshots/invalid-entry.png)
 
 5. Result
-* After the user finishes answering the smoothie decision questions, a smoothie is revealed to them, based on their choices.
+* After the user finishes answering the smoothie decision questions, a smoothie is revealed to them, based on their responses.
 * The smoothie recipe name is in red, bold font and highlighted on a yellow background. This is to emphasize that the end goal of the program has been reached. 
 
 ![smoothie-result](screenshots/smoothie-result.png)
 
 ### Features left to implement
 
-If I had further time on this project I would like to add additional questions about nutritional data such as protein levels and perhaps specific ingrediant questions in order to enhance the user experience further.
+If I had further time on this project I would like to add additional questions about nutritional data such as protein levels and perhaps specific ingrediant based questions in order to enhance UX.
 
 I would also like to add other smoothies types for example, indulgent smoothies or quick smoothies.
 
@@ -103,7 +100,7 @@ I would also like to add other smoothies types for example, indulgent smoothies 
 
 Here I will identify a user need and run through how this is being met by the program.
 
-1. To be able to open up the program and immediately be able to grasp what its purpose is.
+1. To to open up the program and immediately be able to grasp what its purpose is.
 * When the program is enabled, the program purpose is explained in brief to the user and a countdown timer is put in place to give users time to grasp what the program is about, before starting.
 
 ![purpose](screenshots/purpose.png)
@@ -117,7 +114,7 @@ Here I will identify a user need and run through how this is being met by the pr
 ![layout](screenshots/layout.png)
 
 3. To use a program that asks relevant questions and eventually identifies a smoothie recipe that meets their preferences.
-* I have conducted internet research to have a look at the types of smoothie recipes that are available and how they are marketed and from this I have chosen specific questions that I believe maybe relevant for a user.
+* I have conducted internet research to have a look at the types of smoothie recipes that are available and how they are marketed. From this, I have chosen specific questions that I believe maybe relevant for a user.
 * There are four questions that are asked in succession to help whittle down the smoothie selection to one smoothie for the user. This has been checked and all possible input choices lead to one smoothie recipe. 
 
 ![questions](screenshots/questions.png)
@@ -134,30 +131,33 @@ Here I will identify a user need and run through how this is being met by the pr
 
 * Initially, my code was structured such that each function was being called from within the previous function. However, after consultation with my mentor and also using the [Code Institute](https://codeinstitute.net/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=a%26c_SEA_UK_BR_Brand_Code_Institute&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=492338271836&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI9OSlzraT8wIVgbTtCh0lSQINEAAYASAAEgJHFvD_BwE) Love Sandwiches walk-through project as a guideline, I realised that this was not the best practice and it would be better to have one function (referred to as the main function in my code) from which all others could be called. For this reason, I re-worked all of my code. 
 
+![main-function](screenshots/main-function.png)
+
 2. Print statements of function output
 
-* Initially, after each function I was printing out the outcome of the function to the console. This, however, made the console appear cluttered and did not seem like it would create the best user experience. For this reason, I re-worked my code, so that each function was returning the outcome which was then inherited by the next function. 
+* Initially, I was printing out the outcome of each function to the console. This, however, made the console appear cluttered and did not seem like it would create the best UX. For this reason, I re-worked my code, so that each function was returning the outcome which was then inherited by the next function. 
 
 3. Smoothie variable
 
-* After re-working my code so functions were being called from one function (main function), the next challenge I faced was how I could iterate through the smoothie dictionary so that the items of the dictionary could be filtered out after each question. I initially assigned the smoothie variable to equal the smoothies dictionary and used the pop method after each function for loop to filter out items. However, at the end of the code if a user wanted to re-start the program again (if they were not happy with the smoothie suggestion), the program seemed to only recognize one item as being a part of the dictionary. For this reason, I decided to assign the smoothie variable to a copy of the smoothies dictionary using the copy method so that if the program had to be re-run the original dictionary would be copied in full. 
+* After re-working my code so functions were being called from one function (main function), the next challenge I faced was how I could iterate through the smoothie dictionary so that the items of the dictionary could be filtered out after each question. I initially assigned the smoothie variable to equal the smoothies dictionary and used the pop method after each function for loop to filter out items. However, at the end of the code if a user wanted to re-start the program again (if they were not happy with the smoothie suggestion), the program seemed to only recognize one item as being a part of the dictionary and when it got to the end of the program, no recipe would print. For this reason, I decided to assign the smoothie variable to a copy of the smoothies dictionary using the copy method so that if the program had to be re-run the original dictionary would be copied in full. 
 
 ![smoothies-copy](screenshots/smoothies-copy.png)
 
 4. Error handling code
 
-* Initially, my code was repeated the same error handling code block with slight wording changes after each question function. However, I felt that this could be refactored so that one error handling block could be called from within multiple functions, which would reduce repetition. After taking inspiration from the [Code Institute](https://codeinstitute.net/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=a%26c_SEA_UK_BR_Brand_Code_Institute&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=492338271836&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI9OSlzraT8wIVgbTtCh0lSQINEAAYASAAEgJHFvD_BwE) Love Sandwiches project, I reworked my code and created a validate data function which called for three parameters; the input value and the two choice answers. The validate data function could then be called from multiple functions using different input value arguments. Thus allowing the error message to appear slightly differently when called by different functions. 
+* Initially, my code repeated the same error handling code block with slight wording changes for each question function. However, I felt that this could be refactored so that one error handling block could be called from within multiple functions, which would reduce repetition. After taking inspiration from the [Code Institute](https://codeinstitute.net/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=a%26c_SEA_UK_BR_Brand_Code_Institute&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=492338271836&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI9OSlzraT8wIVgbTtCh0lSQINEAAYASAAEgJHFvD_BwE) Love Sandwiches project, I reworked my code and created a validate data function which called for three parameters; the input value and the two choice answers. The validate data function could then be called from multiple functions using different input value arguments. Thus allowing the error message to appear slightly different when called by each question function. 
+* I used python tutor extensively throughout this project to test out any new code before implementing in my project. An example of how I used python tutor to test the validate data function before implenting it in this project, is shown below. The validate data code actually used in my project is shown below the python tutor image. 
 
-I used python tutor extensively throughout this project to test out any new code I wished to implement in my project. An example of how I used python tutor to test the validate data function before implenting it in this project, is shown below. The validate data code actuallu used in my project is shown below the python tutor image. 
-
+Python Tutor - code testing:
 ![python-tutor](screenshots/python-tutor.png)
 
 
+Project - implemented code:
 ![validate-data](screenshots/validate-data.png)
 
 5. Print ingrediants in a vertical list
 
-* I wanted to be able to print the ingrediants of a recipe in vertical list, as per the convention. As the ingrediants in my code were in a nested list within a dictionary, they were naturally printing out in a row. I found from the [codegrepper](https://www.codegrepper.com/code-examples/python/how+to+print+list+vertically+in+python) website a coding solution to be able to print out lists in a vertical fashion, so that each item could be printed on a new line. I applied this logic to my nested lists code. 
+* I wanted to be able to print the ingrediants of a recipe in vertical list, as per the convention. As the ingrediants in my code were in a nested list within a dictionary, they were naturally printing out in a row. I found from the [codegrepper](https://www.codegrepper.com/code-examples/python/how+to+print+list+vertically+in+python) website a coding solution to print out lists in a vertical fashion, so that each item in the list could be printed on a new line. I applied this logic to my nested list code. 
 
 ![ingrediants-vertical](screenshots/ingrediants-vertical.png)
 
@@ -167,6 +167,8 @@ In this project, the errors that I mostly came across were the following:
 
 1. Pep8 E501 - line too long:
 * This error was rectified either by using either a backslash or quotation marks to split a long piece of text into two and separating them out onto two lines. 
+
+![error-e501](screenshots/error-e501.png)
 
 2. Flake8 W291 - trailing white space:
 * This error was rectified by removing any white space, which was initially difficult to notice, but usually occured when rectifying the Pep8 E501 error.
@@ -179,7 +181,7 @@ In this project, the errors that I mostly came across were the following:
 4. Flake8 E302 - expected 2 lines, found 1:
 * This problem occured when creating functions, as I often left only one line between functions where two lines were required. 
 
-After rectifying all errors Pep8 online validator was used to check the code in the run file and the recipes file, both passed the validator check. 
+After rectifying all errors, Pep8 online validator was used to check the code in the run file and the recipes file, both passed the validator check. 
 
 Recipe file:
 
@@ -257,8 +259,9 @@ I would like to acknowledge the below organisations:
 * [Language Programs](https://www.youtube.com/watch?v=tLYHMKeeFIU), for their youtube video on how to use and install python termcolor library.
 * [geeksforgeeks](https://www.geeksforgeeks.org/how-to-create-a-countdown-timer-using-python/), for the countdown timer code.
 * [Real Python](https://realpython.com/python-sleep/), for their instructions on how to add time delays to code. 
-* The following websites for their troubleshooting advice; [Code Institute](https://codeinstitute.net/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=a%26c_SEA_UK_BR_Brand_Code_Institute&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=492338271836&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI9OSlzraT8wIVgbTtCh0lSQINEAAYASAAEgJHFvD_BwE) Python Essentials module and Love Sandwiches walk-through project,  [Stack Overflow](https://stackoverflow.com/) and [W3 Schools](https://www.w3schools.com/).
+* The following websites for their troubleshooting advice; [Code Institute](https://codeinstitute.net/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=a%26c_SEA_UK_BR_Brand_Code_Institute&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=492338271836&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI9OSlzraT8wIVgbTtCh0lSQINEAAYASAAEgJHFvD_BwE) Python Essentials module and Love Sandwiches walk-through project,  [Stack Overflow](https://stackoverflow.com/), [geeksforgeeks](https://www.geeksforgeeks.org/) and [W3 Schools](https://www.w3schools.com/).
+* [Pep8 online](http://pep8online.com/), for code validation checking.
 
 ### Acknowledgements
 
-This project has been an eye-opening experience for me to develop a command line program that looks appealing and is able to manipulate data to deliver results. My thanks goes to Code Institute tutor support who have been fantastic at answering all my queries and my tutor, Seun Owonikoko, for her insight and guidance.
+This project has been an eye-opening and thoroughly enjoyable experience for me to develop a command line program that looks appealing and is able to manipulate data to deliver results. My thanks goes to Code Institute tutor support who have been fantastic at answering all my queries and my tutor, Seun Owonikoko, for her insight and guidance.

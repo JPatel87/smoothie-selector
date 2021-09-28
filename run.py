@@ -45,7 +45,7 @@ def introduction():
             if not name:
                 print("Sorry I didn't catch that...")
                 continue
-            # Below code inspired from CodeInstitute, love sandwiches project.
+            # ValueError code inspired from CodeInstitute, Love Sandwiches.
             else:
                 raise ValueError(f"You entered {name},"
                                  " please enter your name in letters only.")
@@ -58,7 +58,7 @@ def countdown():
     Countdown to start smoothie selection process, using import
     time module.
     """
-    # Timer code from geeksforgeeks.org
+    # Countdown code inspired from geeksforgeeks.org
     t = 10
     while t > 0:
         mins, secs = divmod(t, 60)
@@ -71,9 +71,9 @@ def countdown():
 def smoothie_type():
     """
     User is asked to decide what type of smoothie recipe they are interested \
-    in; energizing or immunity. while loop implemented to \
-    check user input; except block executed to handle error if input is \
-    not valid.
+    in; energizing or immunity. While loop implemented to \
+    check user input. Validate data function run to handle error, \
+    if input is not valid.
     """
     smoothie = smoothies.copy()
     print(colored
@@ -99,7 +99,6 @@ def smoothie_type():
                   " will keep you going during the flu season.\n")
             time.sleep(2)
             print("Logging your choice...\n")
-            # Below code inspired from CodeInstitute, love sandwiches project
             for key1, val1 in list(smoothie.items()):
                 if (val1["Type"] != "I"):
                     smoothie.pop(key1)
@@ -114,7 +113,7 @@ def validate_data(input, choice_one, choice_two):
     """
     Error handling function, to handle invalid input entries.
     """
-    # Code inspired from CodeInstitute, love sandwiches project.
+    # Code inspired from CodeInstitute, Love Sandwiches.
     try:
         if input != choice_one or input != choice_two:
             raise ValueError(f"You entered {input},"
@@ -315,11 +314,13 @@ def main():
     decision()
 
 
+# Title
 # Used unicode consortium names for emojis.
 print("\U0001F34A" " \U0001F952" " \U0001F34F ", "SMOOTHIE SELECTOR",
       "\U0001F34F" " \U0001F952" " \U0001F34A\n")
 
 
+# Start program functions
 introduction()
 countdown()
 main()
